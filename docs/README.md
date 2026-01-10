@@ -4,29 +4,29 @@ Verleihe Deinen Plugin-Seiten in Multisite-Netzwerken das Aussehen eines App Sto
 
 ## Mit Pretty Plugins kannst Du Plugins in Kategorien gruppieren, ihnen auffällige Funktionsbilder geben und sie in einem benutzerfreundlichen Raster anzeigen.
 
-Mache das Finden und Installieren von Plugins zum Kinderspiel. PS-Pretty Plugins ist ein unverzichtbares Tool für jeden Netzwerkbesitzer. Es bietet eine zentrale Steuerung und Konfiguration der Plugins-Seite jeder Webseite. Kombiniere es mit [PS Bloghosting](https://github.com/cp-psource/piestingtal_source/ps-bloghosting-multisite-next-level-plugin/), um einen fantastischen kostenpflichtigen Plugin-Shop zu erstellen.
+Mache das Finden und Installieren von Plugins zum Kinderspiel. PS-Pretty Plugins ist ein unverzichtbares Tool für jeden Netzwerkbesitzer. Es bietet eine zentrale Steuerung und Konfiguration der Plugins-Seite jeder Webseite. Kombiniere es mit [PS Bloghosting](https://github.com/Power-Source/piestingtal_source/ps-bloghosting-multisite-next-level-plugin/), um einen fantastischen kostenpflichtigen Plugin-Shop zu erstellen.
 
 Große Symbole und ein vertrautes Rasterlayout sorgen für ein optisch weitaus ansprechenderes Layout im Vergleich zum standardmäßigen Basiseintrag.
 
-![Screenshot der Plugins-Seite mit dem Rasterlayout](https://github.com/cp-psource/wp-content/uploads/2023/12/prettyplugins-ss12.jpg)
+![Screenshot der Plugins-Seite mit dem Rasterlayout](https://github.com/Power-Source/wp-content/uploads/2023/12/prettyplugins-ss12.jpg)
 
   Große Symbole und ein Rasterlayout machen das Entdecken von Plugins zum Kinderspiel
 
   Plugins können in mehrere Kategorien gruppiert werden, die vom Netzwerkadministrator definiert werden, was es Webseitenbesitzern erleichtert, neue Funktionen zu entdecken und zu installieren.
 
-![Screenshot der Plugin-Kategorien](https://github.com/cp-psource/wp-content/uploads/2023/12/prettyplugins-ss2.jpg)
+![Screenshot der Plugin-Kategorien](https://github.com/Power-Source/wp-content/uploads/2023/12/prettyplugins-ss2.jpg)
 
   Gruppiere Plugins in Kategorien, um sie leichter finden zu können
 
   Eine umfassende Einstellungsseite ermöglicht es einem Netzwerkbesitzer, alle Aspekte der Plugins-Seite zu verwalten, einschließlich Titel, Untertitel, Bilder und die Sichtbarkeit von Beschreibungen. Die Einstellungen können sogar exportiert und importiert werden!
 
-![Screenshot der Einstellungsseite](https://github.com/cp-psource/wp-content/uploads/2023/12/prettyplugins-ss11.jpg)
+![Screenshot der Einstellungsseite](https://github.com/Power-Source/wp-content/uploads/2023/12/prettyplugins-ss11.jpg)
 
   Konfiguriere alle Aspekte des Verhaltens und Aussehens der Plugins-Seite
 
   Für jedes Plugin wird eine genauere Steuerung bereitgestellt. Als Netzwerkadministrator kannst Du den Plugin-Namen, den Link und die Beschreibung überschreiben – Du kannst das Plugin beliebig vielen vorhandenen Kategorien zuweisen oder neue erstellen – und Du kannst ein vorgestelltes Bild laden.
 
-![Screenshot der Plugin-Details-Bearbeitungsfunktion](https://github.com/cp-psource/wp-content/uploads/2023/12/prettyplugins-ss41.jpg)
+![Screenshot der Plugin-Details-Bearbeitungsfunktion](https://github.com/Power-Source/wp-content/uploads/2023/12/prettyplugins-ss41.jpg)
 
   Überschreibe alle Plugin-Attribute
 
@@ -42,11 +42,11 @@ Wenn Du neu bei Word/ClassicPress bist, Beachte dass dieses Plugin nur für Mult
 
 Nach der Installation und Aktivierung siehst Du in Deinem Menü „Netzwerkeinstellungen“ einen neuen Menüpunkt: PS Pretty Plugins. Klicke jetzt auf den Menüpunkt PS Pretty Plugins.
 
-![pretty-plugins-1000-menu](https://github.com/cp-psource/wp-content/uploads/2023/12/pretty-plugins-1000-menu.png)
+![pretty-plugins-1000-menu](https://github.com/Power-Source/wp-content/uploads/2023/12/pretty-plugins-1000-menu.png)
 
   Die Einstellungen sind recht einfach. Aber lasse uns sie trotzdem durchgehen, ja? 
 
-![1\. Setup-Modus aktivieren/deaktivieren. 2\. Wähle Dein bevorzugtes Design. 3\. Wähle das Ziel des Plugin-Links aus. 4\. Wähle Deine Screenshot-Einstellungen aus. 5\. Plugin-Beschreibungen ein-/ausblenden. 6\. Passe die Beschriftungen an.](https://github.com/cp-psource/wp-content/uploads/2023/12/pretty-plugins-1000-settings.png)
+![1\. Setup-Modus aktivieren/deaktivieren. 2\. Wähle Dein bevorzugtes Design. 3\. Wähle das Ziel des Plugin-Links aus. 4\. Wähle Deine Screenshot-Einstellungen aus. 5\. Plugin-Beschreibungen ein-/ausblenden. 6\. Passe die Beschriftungen an.](https://github.com/Power-Source/wp-content/uploads/2023/12/pretty-plugins-1000-settings.png)
 
   1\. Setup-Modus aktivieren/deaktivieren.
 2\. Wähle Dein bevorzugtes Design.
@@ -88,7 +88,7 @@ Nach der Installation und Aktivierung siehst Du in Deinem Menü „Netzwerkeinst
 
 Es werden einige zusätzliche Tools bereitgestellt, mit denen Du Plugin-Daten und -Einstellungen verwalten kannst.
 
-![1\. Datei config.xml exportieren/importieren. 2\. Alle Daten löschen.](https://github.com/cp-psource/wp-content/uploads/2023/12/pretty-plugins-1000-tools.png)
+![1\. Datei config.xml exportieren/importieren. 2\. Alle Daten löschen.](https://github.com/Power-Source/wp-content/uploads/2023/12/pretty-plugins-1000-tools.png)
 
   1\. Datei config.xml exportieren/importieren.
 2\. Alle Daten löschen.
@@ -101,11 +101,11 @@ Es werden einige zusätzliche Tools bereitgestellt, mit denen Du Plugin-Daten un
 
 Schauen wir uns nun an, wie Du anpassen kannst, wie einzelne Plugins in der Plugin-Liste auf allen Webseiten angezeigt werden. Gehe in Deinem Netzwerkadministrator zu Plugins > Installierte Plugins und klicke auf den Link Details bearbeiten für jedes Plugin, das Du bearbeiten möchtest.
 
-![pretty-plugins-1000-edit](https://github.com/cp-psource/wp-content/uploads/2023/12/pretty-plugins-1000-edit.png)
+![pretty-plugins-1000-edit](https://github.com/Power-Source/wp-content/uploads/2023/12/pretty-plugins-1000-edit.png)
 
   Dadurch wird ein vertrauter Bereich geöffnet, der dem Schnellbearbeitungsbereich beim Bearbeiten von Beiträgen ähnelt. Schauen wir uns nun den ersten Teil genauer an.
 
-![pretty-plugins-1000-edit-details](https://github.com/cp-psource/wp-content/uploads/2023/12/pretty-plugins-1000-edit-details.png)
+![pretty-plugins-1000-edit-details](https://github.com/Power-Source/wp-content/uploads/2023/12/pretty-plugins-1000-edit-details.png)
 
   Gib einen benutzerdefinierten _Namen_ ein, um den Anzeigenamen des Plugins zu ersetzen. Wenn nichts eingegeben wird, wird wie immer der tatsächliche Name des Plugins angezeigt. Du kannst eine _Info URL_ eingeben, um die vom Plugin-Autor angegebene URL zu ersetzen. Beachte, dass diese URL nur verwendet wird, wenn Du oben unter _Wähle wohin Plugin Links zeigen_ eine der benutzerdefinierten URL-Anzeigeoptionen ausgewählt hast. Du kannst auch eine benutzerdefinierte _Bild-URL_ hochladen oder darauf verlinken. Dadurch wird das Bild festgelegt, das für dieses Plugin angezeigt wird.
 
@@ -115,7 +115,7 @@ Schauen wir uns nun an, wie Du anpassen kannst, wie einzelne Plugins in der Plug
 
 Schauen wir uns nun den anderen Teil an.
 
-![pretty-plugins-1000-edit-details-2](https://github.com/cp-psource/wp-content/uploads/2023/12/pretty-plugins-1000-edit-details-2.png)
+![pretty-plugins-1000-edit-details-2](https://github.com/Power-Source/wp-content/uploads/2023/12/pretty-plugins-1000-edit-details-2.png)
 
   Um _Kategorien_ hinzuzufügen, klicke auf den Link _Neue Kategorie_, gib Deinen Kategorienamen ein und klicke auf _Hinzufügen_. Anschließend kannst Du Deine Kategorie aus der Liste auswählen.
 
@@ -124,16 +124,16 @@ Schauen wir uns nun den anderen Teil an.
 
 Du kannst eine benutzerdefinierte _Beschreibung_ eingeben, die die vom Plugin-Autor hinzugefügte Beschreibung ersetzt. Lasse das Feld leer, um stattdessen diese Beschreibung zu verwenden. Wenn Du mit der Bearbeitung fertig bist und auf die Schaltfläche „Aktualisieren“ geklickt hast, werden Deine Anpassungen direkt in der Plugin-Liste in Deinem Netzwerkadministrator angezeigt.
 
-![pretty-plugins-1000-edit-details-3](https://github.com/cp-psource/wp-content/uploads/2023/12/pretty-plugins-1000-edit-details-3.png)
+![pretty-plugins-1000-edit-details-3](https://github.com/Power-Source/wp-content/uploads/2023/12/pretty-plugins-1000-edit-details-3.png)
 
 ### Erfahrung als Webseiten-Administrator
 
 Sobald alles konfiguriert ist und Du „Setup-Modus aktivieren“ in den allgemeinen Einstellungen auf „Falsch“ setzt, sehen Deine Webseiten-Administratoren etwas, das diesem Bild sehr ähnlich ist.
 
-![pretty-plugins-1000-site-view](https://github.com/cp-psource/wp-content/uploads/2023/12/pretty-plugins-1000-site-view.png)
+![pretty-plugins-1000-site-view](https://github.com/Power-Source/wp-content/uploads/2023/12/pretty-plugins-1000-site-view.png)
 
   Aktive Plugins werden mit einem grünen Band im Bild angezeigt. In unserem Beispiel haben wir die Beschreibungen so eingestellt, dass sie nicht angezeigt werden, sodass Webseiten-Administratoren sie anzeigen können, indem sie auf den Detaillink klicken. Wenn Du lieber Deine eigenen Bilder für die Bänder verwenden möchtest, ersetze einfach die Standardbilder in /pretty-plugins/themes/quick-sand/images/. Wenn Du Dein eigenes Design erstellt hast, ersetze natürlich stattdessen die Designs im Ordner /images/. Oben (und im Plugins-Menü) befinden sich die Filteroptionen. Das sind alle Kategorien, die wir für unsere Plugins eingerichtet haben. Wenn Du auf einen dieser Links klickst, werden nur Plugins angezeigt, die dieser Kategorie zugeordnet sind.
 
 ### PS Bloghosting-Integration
 
-Oh ja, das haben wir! Alle Plugins, die Du den Ebenen [PS Bloghosting](https://github.com/cp-psource/piestingtal_source/ps-bloghosting-multisite-next-level-plugin/) im Premium-Plugin-Modul hinzugefügt hast, werden auf allen „Pro“-Webseiten mit einem Menüband in der Ecke des Plugin-Bildes angezeigt. Bewege Deinen Mauszeiger über ein beliebiges Plugin, das Du im Premium-Plugin-Modul für PS Bloghosting-Stufen festgelegt hast, und Du erhältst die Meldung „Upgrade auf [Stufe]“. Wenn die Webseite nicht auf die PS Bloghosting-Ebene aktualisiert wurde und der Webseiten-Administrator auf eines dieser Plugins klickt, wird er zu Deiner PS Bloghosting-Upgrade-Seite weitergeleitet. Wie cool ist das? Möglicherweise hast Du im obigen Screenshot auch bemerkt, dass wir Pretty Plugins-Kategorien erstellt haben, die unsere PS Bloghosting-Stufen widerspiegeln: Free, Premium und Super. Das macht es für Deine Webseiten-Administratoren einfach zu einfach, auf einen Blick die Vorteile eines Upgrades ihrer Website auf eine kostenpflichtige PS Bloghosting-Stufe in Deinem Netzwerk zu erkennen. Gern geschehen. :) Wir hoffen, dass Du und Deine Benutzer Pretty Plugins genießen und das Beste daraus machen!
+Oh ja, das haben wir! Alle Plugins, die Du den Ebenen [PS Bloghosting](https://github.com/Power-Source/piestingtal_source/ps-bloghosting-multisite-next-level-plugin/) im Premium-Plugin-Modul hinzugefügt hast, werden auf allen „Pro“-Webseiten mit einem Menüband in der Ecke des Plugin-Bildes angezeigt. Bewege Deinen Mauszeiger über ein beliebiges Plugin, das Du im Premium-Plugin-Modul für PS Bloghosting-Stufen festgelegt hast, und Du erhältst die Meldung „Upgrade auf [Stufe]“. Wenn die Webseite nicht auf die PS Bloghosting-Ebene aktualisiert wurde und der Webseiten-Administrator auf eines dieser Plugins klickt, wird er zu Deiner PS Bloghosting-Upgrade-Seite weitergeleitet. Wie cool ist das? Möglicherweise hast Du im obigen Screenshot auch bemerkt, dass wir Pretty Plugins-Kategorien erstellt haben, die unsere PS Bloghosting-Stufen widerspiegeln: Free, Premium und Super. Das macht es für Deine Webseiten-Administratoren einfach zu einfach, auf einen Blick die Vorteile eines Upgrades ihrer Website auf eine kostenpflichtige PS Bloghosting-Stufe in Deinem Netzwerk zu erkennen. Gern geschehen. :) Wir hoffen, dass Du und Deine Benutzer Pretty Plugins genießen und das Beste daraus machen!

@@ -869,8 +869,8 @@ msgstr "Details"
 
 #. Plugin URI of the plugin/theme
 #, fuzzy
-msgid "https://github.com/cp-psource/piestingtal-source-project/ps-pretty-plugins/"
-msgstr "https://github.com/cp-psource/piestingtal-source-project/ps-pretty-plugins/"
+msgid "https://github.com/Power-Source/piestingtal-source-project/ps-pretty-plugins/"
+msgstr "https://github.com/Power-Source/piestingtal-source-project/ps-pretty-plugins/"
 
 #. Description of the plugin/theme
 #, fuzzy
@@ -888,5 +888,5 @@ msgstr "PSOURCE"
 
 #. Author URI of the plugin/theme
 #, fuzzy
-msgid "https://github.com/cp-psource/"
-msgstr "https://github.com/cp-psource/"
+msgid "https://github.com/Power-Source/"
+msgstr "https://github.com/Power-Source/"

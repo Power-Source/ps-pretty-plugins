@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: PS-Pretty Plugins
-Plugin URI: https://cp-psource.github.io/ps-pretty-plugins/
+Plugin Name: PS Pretty Plugins
+Plugin URI: https://power-source.github.io/ps-pretty-plugins/
 Description: Verleihe Deinen Plugin-Seiten in Multisite-Netzwerken das Aussehen eines App Stores mit ausgewählten Bildern, Kategorien und einer erstaunlichen Suche.
 Author: PSOURCE
-Author URI: https://github.com/cp-psource/
+Author URI: https://github.com/Power-Source/
 Network: true
 Text Domain: wmd_prettyplugins
 Domain Path: languages
