@@ -1,0 +1,924 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PS-Pretty Plugins\n"
+"POT-Creation-Date: 2023-12-25 00:12+0100\n"
+"PO-Revision-Date: 2023-12-25 00:13+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: pretty-plugins.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: psource/psource-plugin-update/vendor\n"
+
+#: external/psource-help-tooltips.php:296
+#, fuzzy
+msgid "Help"
+msgstr "Aiuto"
+
+#: includes/element-edit-plugin-details.php:8 pretty-plugins.php:541
+#, fuzzy
+msgid "Plugin-Details bearbeiten"
+msgstr "Modifica dei dettagli del plugin"
+
+#: includes/element-edit-plugin-details.php:11
+msgid "Name"
+msgstr "Nome"
+
+#: includes/element-edit-plugin-details.php:18
+#, fuzzy
+msgid "Orginal Name"
+msgstr "Nome originale"
+
+#: includes/element-edit-plugin-details.php:25
+#, fuzzy
+msgid "Info URL"
+msgstr "URL definito dall'utente"
+
+#: includes/element-edit-plugin-details.php:30
+#, fuzzy
+msgid "Bild URL"
+msgstr "URL immagine"
+
+#: includes/element-edit-plugin-details.php:34
+#, fuzzy
+msgid "Bild Wählen"
+msgstr "Selezionare l'immagine"
+
+#: includes/element-edit-plugin-details.php:35
+#, fuzzy
+msgid "Bild bearbeiten"
+msgstr "Modifica immagine"
+
+#: includes/element-edit-plugin-details.php:43 pretty-plugins.php:344
+#: themes/quick-sand/index.php:77
+msgid "Kategorien"
+msgstr "Categories"
+
+#: includes/element-edit-plugin-details.php:53
+msgid "bearbeiten"
+msgstr "Modificare"
+
+#: includes/element-edit-plugin-details.php:74
+#, fuzzy
+msgid "Neue Kategorie"
+msgstr "Nuova categoria"
+
+#: includes/element-edit-plugin-details.php:75
+#: includes/element-edit-plugin-details.php:82
+#, fuzzy
+msgid "Kategorie bearbeiten"
+msgstr "Modifica categoria"
+
+#: includes/element-edit-plugin-details.php:81
+#, fuzzy
+msgid "Kategorie hinzufügen"
+msgstr "Aggiungi categoria"
+
+#: includes/element-edit-plugin-details.php:81
+msgid "Hinzufügen"
+msgstr "Aggiungi"
+
+#: includes/element-edit-plugin-details.php:82
+msgid "Speichern"
+msgstr "Salvare"
+
+#: includes/element-edit-plugin-details.php:83
+#: includes/element-edit-plugin-details.php:106
+msgid "Abbrechen"
+msgstr "Cancella"
+
+#: includes/element-edit-plugin-details.php:94
+msgid "Beschreibung"
+msgstr "Descrizione"
+
+#: includes/element-edit-plugin-details.php:98
+#, fuzzy
+msgid "Originalbeschreibung"
+msgstr "Descrizione originale"
+
+#: includes/element-edit-plugin-details.php:107
+msgid "Aktualisieren"
+msgstr "Aggiorna"
+
+#: includes/frontend-showcase-files/plugin_list.php:25
+#: includes/frontend-showcase-files/plugin_list.php:65
+#, fuzzy
+msgid "Erfahre mehr über dieses Plugin"
+msgstr "Per saperne di più su questo plugin"
+
+#: includes/functions.php:51
+#, fuzzy
+msgid " (Benutzerdefiniert)"
+msgstr " (Definito dall'utente)"
+
+#: includes/page-network-admin.php:2
+#, fuzzy
+msgid "PS-Pretty Plugins Einstellungen"
+msgstr "Impostazioni dei plugin PS-Pretty"
+
+#: includes/page-network-admin.php:3
+#, fuzzy, php-format
+msgid ""
+"Auf dieser Seite kannst Du PS-Pretty Plugins konfigurieren. Du kannst "
+"benutzerdefinierte Plugin-Daten für jedes Plugin konfigurieren auf der <a "
+"href=\"%s\">\"Plugins\" Netzwerkseite</a> durch Klicken auf \"Details "
+"bearbeiten\". Klicke <a href=\"%s\">hier</a> um zu sehen, wie es aktuell auf "
+"der Hauptseite aussieht."
+msgstr ""
+"In questa pagina è possibile configurare i plugin di PS-Pretty. È possibile "
+"configurare i dati personalizzati dei plugin per ogni plugin nella <a href="
+"\"%s\"> pagina di rete \"Plugin\"</a> facendo clic su \"Modifica dettagli\". "
+"Fare clic <a href=\"%s\">qui</a> per vedere l'aspetto attuale della pagina "
+"principale."
+
+#: includes/page-network-admin.php:10
+#, fuzzy
+msgid "Allgemeine Einstellungen"
+msgstr "Impostazioni generali"
+
+#: includes/page-network-admin.php:15
+#, fuzzy
+msgid "Aktiviere Setup-Modus"
+msgstr "Attivare la modalità di impostazione"
+
+#: includes/page-network-admin.php:22
+#, fuzzy
+msgid ""
+"Bei der Einstellung \"WAHR\" wird die Plugin-Seite \"PS-Pretty Plugins\" nur "
+"auf der Hauptseite angezeigt. Dieser Modus ist nützlich, um Plugin-Details "
+"zu konfigurieren, bevor die PS-Pretty Plugins-Funktionen an allen Standorten "
+"im Netzwerk aktiviert werden."
+msgstr ""
+"Con l'impostazione \"VERO\", la pagina dei plugin \"PS-Pretty Plugins\" "
+"viene visualizzata solo nella pagina principale. Questa modalità è utile per "
+"configurare i dettagli del plugin prima che le funzioni di PS-Pretty Plugins "
+"vengano attivate in tutte le postazioni della rete."
+
+#: includes/page-network-admin.php:28
+#, fuzzy
+msgid "Darstellung der Plugin-Seite"
+msgstr "Visualizzazione della pagina del plugin"
+
+#: includes/page-network-admin.php:38
+#, fuzzy
+msgid ""
+"Wähle das Design aus, mit dem Du Deine Plugin-Seiten anzeigen möchtest. Du "
+"kannst Deine eigenen Themes hinzufügen im \"wp-content/upload/prettyplugins/"
+"your-theme-/\" Ordner. (Tipp: Dupliziere das Standarddesign von \"wp-content/"
+"plugins/prettyplugins/themes/\" um anzufangen.)"
+msgstr ""
+"Selezionare il tema che si desidera utilizzare per visualizzare le pagine "
+"dei plugin. È possibile aggiungere i propri temi nella cartella \"wp-content/"
+"upload/prettyplugins/your-theme-/\". (Suggerimento: duplicare il tema "
+"predefinito da \"wp-content/plugins/prettyplugins/themes/\" per iniziare)"
+
+#: includes/page-network-admin.php:44
+#, fuzzy
+msgid "Themen- und Darstellungseinstellungen"
+msgstr "Impostazioni del tema e del display"
+
+#: includes/page-network-admin.php:50
+#, fuzzy
+msgid "Wähle wohin Plugin Links zeigen"
+msgstr "Scegliere dove mostrare i link dei plugin"
+
+#: includes/page-network-admin.php:65
+#, fuzzy
+msgid "Ersten Screenshot automatisch laden"
+msgstr "Carica automaticamente il primo screenshot"
+
+#: includes/page-network-admin.php:72
+#, fuzzy
+msgid ""
+"Wenn kein Bild für ein Plugin festgelegt wurde, wird der erste verfügbare "
+"Screenshot im Plugin-Ordner geladen (Beispiel: Screenshot-1.png)."
+msgstr ""
+"Se non è stata specificata alcuna immagine per un plugin, viene caricata la "
+"prima schermata disponibile nella cartella del plugin (esempio: Schermata-1."
+"png)."
+
+#: includes/page-network-admin.php:78
+#, fuzzy
+msgid "Screenshot mit korrektem Namen automatisch laden"
+msgstr "Carica automaticamente lo screenshot con il nome corretto"
+
+#: includes/page-network-admin.php:85
+#, fuzzy
+msgid ""
+"Wenn das vorgestellte Bild für ein Plugin nicht festgelegt wurde und sich "
+"ein Bild in \"wp-content/upload/prettyplugins/screenshots/\"  befindet mit "
+"dem richtigen Namen (Beispiel: Plugin-Speicherort -  \"wp-content/plugins/"
+"akismet/akismet.php\", image file - \"akismet-akismet.png\".), wird es "
+"automatisch geladen. Bei dieser Methode funktionieren nur PNG-Dateien"
+msgstr ""
+"Se l'immagine principale di un plugin non è stata impostata e c'è "
+"un'immagine in \"wp-content/upload/prettyplugins/screenshots/\" con il nome "
+"corretto (esempio: posizione del plugin - \"wp-content/plugins/akismet/"
+"akismet.php\", file immagine - \"akismet-akismet.png\"), verrà caricata "
+"automaticamente. Con questo metodo funzionano solo i file PNG"
+
+#: includes/page-network-admin.php:91
+#, fuzzy
+msgid "WP.org-Bild automatisch laden"
+msgstr "Carica automaticamente l'immagine di WP.org"
+
+#: includes/page-network-admin.php:98
+#, fuzzy
+msgid ""
+"Wenn kein ausgewähltes Bild für ein Plugin festgelegt wurde, wird ein Bild "
+"aus dem Plugin-Verzeichnis von wordpress.org geladen. Es kann nicht "
+"garantiert werden, dass das Bild gefunden wird."
+msgstr ""
+"Se non è stata specificata alcuna immagine selezionata per un plugin, viene "
+"caricata un'immagine dalla directory dei plugin di wordpress.org. Non è "
+"possibile garantire che l'immagine venga trovata."
+
+#: includes/page-network-admin.php:104
+#, fuzzy
+msgid "Beschreibungen minimieren"
+msgstr "Ridurre al minimo le descrizioni"
+
+#: includes/page-network-admin.php:111
+#, fuzzy
+msgid ""
+"Wenn \"Wahr\", wird die \"Beschreibung\" des Plugins wird standardmäßig "
+"ausgeblendet und nach dem Klicken auf den Link \"Beschreibungen\" auf der "
+"Seite der Plugins angezeigt. Das Theme muss dies unterstützen"
+msgstr ""
+"Se \"Vero\", la \"Descrizione\" del plugin è nascosta per impostazione "
+"predefinita e viene visualizzata dopo aver fatto clic sul link \"Descrizioni"
+"\" nella pagina del plugin. Il tema deve supportare questa opzione"
+
+#: includes/page-network-admin.php:116
+#, fuzzy
+msgid "Beschriftungen"
+msgstr "Etichettatura"
+
+#: includes/page-network-admin.php:121
+#, fuzzy
+msgid "Plugin Seitentitel"
+msgstr "Titolo della pagina del plugin"
+
+#: includes/page-network-admin.php:126
+#, fuzzy
+msgid ""
+"Dies ist der Menüpunkt \"Plugins\". Nenne es \"Plugins\", \"Apps\", \"Add-Ons"
+"\" oder was auch immer Du möchtest."
+msgstr ""
+"Questa è la voce di menu \"Plugin\". Chiamatela \"Plugin\", \"App\", "
+"\"Componenti aggiuntivi\" o come preferite."
+
+#: includes/page-network-admin.php:131
+#, fuzzy
+msgid "Beschreibung der Plugin-Seite"
+msgstr "Descrizione della pagina del plugin"
+
+#: includes/page-network-admin.php:136
+#, fuzzy
+msgid ""
+"Dieser Text wird oben auf der Plugins-Seite angezeigt. Sage Deinen "
+"Benutzern, was Du zu bieten hast."
+msgstr ""
+"Questo testo viene visualizzato nella parte superiore della pagina dei "
+"plugin. Per dire ai vostri utenti che cosa avete da offrire."
+
+#: includes/page-network-admin.php:141
+#, fuzzy
+msgid "Benutzerdefiniertes Link-Label"
+msgstr "Etichetta di collegamento personalizzata"
+
+#: includes/page-network-admin.php:146
+#, fuzzy
+msgid ""
+"Fügt für jedes Plugin einen Link zu einer beliebigen URL hinzu. Zum Beispiel "
+"ein Link zur Unterstützung von Dokumenten für das Plugin."
+msgstr ""
+"Aggiunge un collegamento a qualsiasi URL per ogni plugin. Ad esempio, un "
+"collegamento ai documenti di supporto per il plugin."
+
+#: includes/page-network-admin.php:152
+msgid "Änderungen speichern"
+msgstr "Save changes"
+
+#: includes/page-network-admin.php:155
+#, fuzzy
+msgid "Exportieren and Importieren"
+msgstr "Esportazione e importazione"
+
+#: includes/page-network-admin.php:160
+msgid "Exportieren"
+msgstr "Esportare"
+
+#: includes/page-network-admin.php:164
+#, fuzzy
+msgid "Exportdatei herunterladen"
+msgstr "Scarica il file di esportazione"
+
+#: includes/page-network-admin.php:166
+#, fuzzy
+msgid ""
+"Exportiere Daten und Einstellungen für den späteren Import oder verwende sie "
+"als Konfigurationsdatei. Du kannst die exportierte Datei mit dem Namen "
+"\"config.xml\" in den Ordner \"wp-content/upload/prettyplugins/\" legen, um "
+"Daten und Einstellungen automatisch zu laden."
+msgstr ""
+"Esportare i dati e le impostazioni per importarli successivamente o "
+"utilizzarli come file di configurazione. È possibile inserire il file "
+"esportato con il nome \"config.xml\" nella cartella \"wp-content/upload/"
+"prettyplugins/\" per caricare automaticamente i dati e le impostazioni."
+
+#: includes/page-network-admin.php:166
+#, fuzzy
+msgid ""
+"Beachte dass auch Daten aus der aktuellen Konfigurationsdatei (falls "
+"vorhanden) exportiert werden."
+msgstr ""
+"Si noti che vengono esportati anche i dati del file di configurazione "
+"corrente (se disponibile)."
+
+#: includes/page-network-admin.php:173
+#, fuzzy
+msgid "Importieren:"
+msgstr "Importazione:"
+
+#: includes/page-network-admin.php:178
+#, fuzzy
+msgid "Datei hochladen und importieren"
+msgstr "Caricare e importare il file"
+
+#: includes/page-network-admin.php:179
+#, fuzzy
+msgid ""
+"Wähle eine Exportdatei (korrekt formatierte XML-Datei), um Daten und "
+"Einstellungen zu importieren. Diese Aktion ersetzt alle vorhandenen Daten "
+"und Einstellungen."
+msgstr ""
+"Selezionare un file di esportazione (file XML correttamente formattato) per "
+"importare i dati e le impostazioni. Questa azione sostituisce tutti i dati e "
+"le impostazioni esistenti."
+
+#: includes/page-network-admin.php:185
+#, fuzzy
+msgid "Zurücksetzen:"
+msgstr "Azzeramento:"
+
+#: includes/page-network-admin.php:189
+#, fuzzy
+msgid "Are you sure?"
+msgstr "Sei sicuro?"
+
+#: includes/page-network-admin.php:189
+#, fuzzy
+msgid "Lösche alle benutzerdefinierten Plugin-Daten"
+msgstr "Cancellare tutti i dati dei plugin definiti dall'utente"
+
+#: includes/page-network-admin.php:191
+#, fuzzy
+msgid ""
+"Diese Aktion löscht alle vorhandenen benutzerdefinierten Plugin-Daten "
+"dauerhaft."
+msgstr ""
+"Questa azione cancella definitivamente tutti i dati dei plugin definiti "
+"dall'utente."
+
+#: pretty-plugins.php:132 pretty-plugins.php:528
+msgid "Plugins"
+msgstr "Plugins"
+
+#: pretty-plugins.php:133
+#, fuzzy
+msgid ""
+"Mit Plugins kannst Du zusätzliche Funktionen auf Deiner Webseite aktivieren! "
+"Hier ist eine Liste dessen, was wir für Dich zur Verfügung haben."
+msgstr ""
+"Con i plugin potete attivare ulteriori funzioni sul vostro sito web! Ecco un "
+"elenco di ciò che abbiamo a disposizione per voi."
+
+#: pretty-plugins.php:134
+#, fuzzy
+msgid "Mehr Information"
+msgstr "Per saperne di più sui plugin"
+
+#: pretty-plugins.php:143
+#, fuzzy, php-format
+msgid ""
+"PS-Pretty Plugins funktioniert nur in Multisite-Konfigurationen. Wie Du "
+"Multisite konfigurierst und benutzt erfährst Du <a href=\"%s\" target="
+"\"_blank\">hier</a>."
+msgstr ""
+"PS-I plugin di questo tipo funzionano solo nelle configurazioni multisito. "
+"Potete scoprire come configurare e utilizzare il multisito <a href=\"%s\" "
+"target=\"_blank\">qui</a>."
+
+#: pretty-plugins.php:229
+#, fuzzy
+msgid ""
+"Du hast nicht genügend Berechtigungen, um Plugins für diese Seite zu "
+"aktivieren."
+msgstr ""
+"Non si dispone di autorizzazioni sufficienti per attivare i plugin per "
+"questa pagina."
+
+#: pretty-plugins.php:259
+#, fuzzy
+msgid ""
+"Du hast nicht genügend Berechtigungen, um Plugins für diese Seite zu "
+"deaktivieren."
+msgstr ""
+"Non si dispone di autorizzazioni sufficienti per disattivare i plugin di "
+"questa pagina."
+
+#: pretty-plugins.php:338
+msgid "Bild"
+msgstr "Immagine"
+
+#: pretty-plugins.php:339 pretty-plugins.php:594
+#, fuzzy
+msgid "Code bearbeiten"
+msgstr "Modifica del codice"
+
+#: pretty-plugins.php:340
+#, fuzzy
+msgid "Ursprüngliche Beschreibung ein-/ausblenden"
+msgstr "Mostra/nascondi la descrizione originale"
+
+#: pretty-plugins.php:341 pretty-plugins.php:590
+#, fuzzy
+msgid "Details bearbeiten"
+msgstr "Modifica dei dettagli"
+
+#: pretty-plugins.php:342 pretty-plugins.php:590
+#, fuzzy
+msgid "Bearbeite Plugin-Details wie Titel, Beschreibung, Bild und Kategorien"
+msgstr ""
+"Modificare i dettagli del plugin, come titolo, descrizione, immagine e "
+"categorie"
+
+#: pretty-plugins.php:343
+#, fuzzy
+msgid "Besuche die Hilfeseite des Plugins"
+msgstr "Visitate la pagina di aiuto del plugin"
+
+#: pretty-plugins.php:345
+#, fuzzy
+msgid ""
+"Wähle ein Bild für den Plugin-Screenshot (empfohlene Größe: 600px auf 450px)"
+msgstr ""
+"Selezionare un'immagine per lo screenshot del plugin (dimensioni "
+"consigliate: 600px per 450px)"
+
+#: pretty-plugins.php:346
+#, fuzzy
+msgid "Bild auswählen"
+msgstr "Selezionare l'immagine"
+
+#: pretty-plugins.php:347
+msgid "Bearbeiten"
+msgstr "Modifica"
+
+#: pretty-plugins.php:351
+#, fuzzy
+msgid "Nach Kategorie filtern"
+msgstr "Filtrare per categoria"
+
+#: pretty-plugins.php:408
+#, fuzzy, php-format
+msgid "%s Only"
+msgstr "%s Solo"
+
+#: pretty-plugins.php:418
+msgid "Deaktivieren"
+msgstr "Disattivare"
+
+#: pretty-plugins.php:423
+msgid "Aktivieren"
+msgstr "Attivare"
+
+#: pretty-plugins.php:432 pretty-plugins.php:490 themes/material/index.php:44
+#: themes/quick-sand/index.php:25
+msgid "Aktiv"
+msgstr "Attivo"
+
+#: pretty-plugins.php:435
+#, fuzzy
+msgid "Frei"
+msgstr "Gratuito"
+
+#: pretty-plugins.php:437
+#, fuzzy
+msgid "Nur Pro"
+msgstr "Solo Pro"
+
+#: pretty-plugins.php:488 pretty-plugins.php:490 pretty-plugins.php:528
+#: themes/material/index.php:28 themes/material/index.php:43
+#: themes/quick-sand/index.php:14 themes/quick-sand/index.php:24
+msgid "Alle"
+msgstr "Tutti"
+
+#: pretty-plugins.php:490 themes/material/index.php:45
+#: themes/quick-sand/index.php:26
+msgid "Inaktiv"
+msgstr "Inattivo"
+
+#: pretty-plugins.php:509
+#, fuzzy
+msgid "Suche Installierte Plugins"
+msgstr "Ricerca dei plugin installati"
+
+#: pretty-plugins.php:510
+#, fuzzy
+msgid "Suche nach verfügbaren Plugins:"
+msgstr "Cercare i plugin disponibili:"
+
+#: pretty-plugins.php:511
+#, fuzzy
+msgid "Suche installierte Plugins ..."
+msgstr "Cerca i plugin installati ..."
+
+#: pretty-plugins.php:512
+#, fuzzy
+msgid "Suche nach verfügbaren Plugins ..."
+msgstr "Cerca i plugin disponibili ..."
+
+#: pretty-plugins.php:513
+#, fuzzy
+msgid "Kategorien:"
+msgstr "Categorie:"
+
+#: pretty-plugins.php:543
+#, fuzzy, php-format
+msgid ""
+"Du kannst die Plugin-Details für jedes Plugin bearbeiten, indem Du auf "
+"\"Details bearbeiten\" klickst. Alle neuen Details werden sichtbar auf <a "
+"href=\"%s\">der Plugins-Seite</a> und verfügbar für alle Netzwerkseiten. Es "
+"ist auch möglich, zusätzliche Einstellungen zu tätigen auf <a href=\"%s"
+"\">dieser Seite</a>."
+msgstr ""
+"È possibile modificare i dettagli del plugin per ogni plugin facendo clic su "
+"\"Modifica dettagli\". Tutti i nuovi dettagli saranno visibili nella <a href="
+"\"%s\">pagina dei plugin</a> e disponibili per tutte le pagine della rete. "
+"In <a href=\"%s\">questa pagina</a> è inoltre possibile effettuare ulteriori "
+"impostazioni."
+
+#: pretty-plugins.php:544
+#, fuzzy
+msgid ""
+"<strong>Name</strong> - Ersetze den Namen des Plugins durch einen Deiner "
+"Wahl. Lasse das Feld leer, um den ursprünglichen Namen zu verwenden."
+msgstr ""
+"<strong>Nome</strong> - Sostituire il nome del plugin con uno a scelta. "
+"Lasciare il campo vuoto per utilizzare il nome originale."
+
+#: pretty-plugins.php:545
+#, fuzzy
+msgid ""
+"<strong>Eigene URL</strong> - Erstelle einen externen Plugin-Link zu einer "
+"beliebigen URL Deiner Wahl, z.B. zur Support-Dokumentation."
+msgstr ""
+"<strong>URL personalizzato</strong> - Crea un collegamento esterno al plugin "
+"a un URL a scelta, ad esempio alla documentazione di supporto."
+
+#: pretty-plugins.php:546
+#, fuzzy
+msgid ""
+"<strong>Bild URL</strong> - Stelle das angezeigte Bild für dieses Plugin "
+"ein. Du kannst ein Bild aus Deiner Mediengalerie auswählen oder die URL der "
+"Datei kopieren, die sich unter \"wp-content/uploads/prettyplugins/"
+"screenshots/\" befindet. Alternativ wird eine Datei mit dem richtigen Namen "
+"automatisch geladen, auch wenn dieses Feld leer ist (Beispiel: Speicherort "
+"des Plugins -  \"wp-content/plugins/akismet/akismet.php\", image file - "
+"\"akismet-akismet.png\". Nur PNG Dateien funktionieren mit dieser Methode.). "
+"Die Einstellung \"Screenshot mit korrektem Namen automatisch laden\" muss "
+"auf \"WAHR\" gesetzt sein, damit sie funktioniert. Empfohlene Abmessungen "
+"sind 600px auf 450px."
+msgstr ""
+"<strong>URL immagine</strong> - Imposta l'immagine visualizzata per questo "
+"plugin. È possibile selezionare un'immagine dalla propria galleria "
+"multimediale o copiare l'URL del file situato in \"wp-content/uploads/"
+"prettyplugins/screenshots/\". In alternativa, verrà caricato automaticamente "
+"un file con il nome corretto, anche se questo campo è vuoto (esempio: "
+"posizione del plugin - \"wp-content/plugins/akismet/akismet.php\", file "
+"immagine - \"akismet-akismet.png\". Con questo metodo funzionano solo i file "
+"PNG). L'impostazione \"Carica automaticamente lo screenshot con il nome "
+"corretto\" deve essere impostata su \"VERO\" perché funzioni. Le dimensioni "
+"consigliate sono 600px per 450px."
+
+#: pretty-plugins.php:547
+#, fuzzy
+msgid ""
+"<strong>Kategorien</strong> - Hier kannst Du Kategorien festlegen, denen das "
+"Plugin zugewiesen wird. Nicht verwendete Kategorien werden automatisch "
+"gelöscht."
+msgstr ""
+"<strong>Categorie</strong> - Qui è possibile definire le categorie a cui il "
+"plugin è assegnato. Le categorie non utilizzate vengono eliminate "
+"automaticamente."
+
+#: pretty-plugins.php:548
+#, fuzzy
+msgid ""
+"<strong>Beschreibung</strong> - Ersetze die ursprüngliche Beschreibung des "
+"Plugins durch Deine eigene. Lasse das Feld leer, um das Original zu "
+"verwenden."
+msgstr ""
+"<strong>Descrizione</strong> - Sostituire la descrizione originale del "
+"plugin con la propria. Lasciare il campo vuoto per utilizzare l'originale."
+
+#: pretty-plugins.php:560
+#, fuzzy
+msgid ""
+"Ersetze den Namen des Plugins durch einen Deiner Wahl. Lasse das Feld leer, "
+"um den ursprünglichen Namen zu verwenden."
+msgstr ""
+"Sostituire il nome del plugin con uno a scelta. Lasciare il campo vuoto per "
+"utilizzare il nome originale."
+
+#: pretty-plugins.php:561
+#, fuzzy
+msgid ""
+"Erstelle einen externen Plugin-Link zu einer beliebigen URL Deiner Wahl, z."
+"B. zur Support-Dokumentation."
+msgstr ""
+"Creare un collegamento esterno al plugin a un URL a scelta, ad esempio alla "
+"documentazione di supporto."
+
+#: pretty-plugins.php:562
+#, fuzzy
+msgid ""
+"Stelle das angezeigte Bild für dieses Plugin ein. Empfohlene Abmessungen "
+"sind 600px zu 450px. Verwende die Registerkarte \"Hilfe\" (obere rechte "
+"Ecke), um Informationen zur erweiterten Verwendung zu erhalten."
+msgstr ""
+"Imposta l'immagine visualizzata per questo plugin. Le dimensioni consigliate "
+"sono da 600px a 450px. Utilizzare la scheda \"Aiuto\" (in alto a destra) per "
+"ottenere informazioni sull'utilizzo avanzato."
+
+#: pretty-plugins.php:563
+#, fuzzy
+msgid ""
+"Hier kannst Du Kategorien festlegen, denen das Plugin zugewiesen wird. Nicht "
+"verwendete Kategorien werden automatisch gelöscht."
+msgstr ""
+"Qui è possibile definire le categorie a cui il plugin è assegnato. Le "
+"categorie non utilizzate vengono eliminate automaticamente."
+
+#: pretty-plugins.php:564
+#, fuzzy
+msgid ""
+"Ersetze die ursprüngliche Beschreibung des Plugins durch Deine eigene. Lasse "
+"das Feld leer, um das Original zu verwenden."
+msgstr ""
+"Sostituire la descrizione originale del plugin con la propria. Lasciare il "
+"campo vuoto per utilizzare l'originale."
+
+#: pretty-plugins.php:569
+#, fuzzy, php-format
+msgid ""
+"PS-Pretty Plugins befindet sich derzeit im \"Setup-Modus\". Diese Erinnerung "
+"verschwindet, nachdem das Plugin konfiguriert und der Setup-Modus auf \"AUS"
+"\" gesetzt wurde. <a href=\"%s\">hier</a>. Du kannst die Details für jedes "
+"Plugin in Deinem Netzwerk <a href=\"%s\">hier</a>  ändern, und kontrolliere, "
+"wie die Seite \"Plugins\" für alle Netzwerkseiten aussieht <a href=\"%s"
+"\">hier</a>."
+msgstr ""
+"PS-Pretty Plugins è attualmente in \"Modalità di configurazione\". Questo "
+"promemoria scomparirà dopo che il plugin sarà stato configurato e la "
+"modalità di configurazione sarà stata impostata su \"OFF\". <a href=\"%s"
+"\">qui</a>. È possibile modificare i dettagli di ciascun plugin della rete "
+"<a href=\"%s\">qui</a> e verificare l'aspetto della pagina \"Plugin\" per "
+"tutti i siti della rete <a href=\"%s\">qui</a>."
+
+#: pretty-plugins.php:576
+#, fuzzy, php-format
+msgid ""
+"Als Super Admin kannst Du beliebige Plugins für diese Seite aktivieren. "
+"Bitte beachte, dass auf die Standard-Plugin-Seite weiterhin unter <a href="
+"\"%s\">dieser URL</a> zugegriffen werden kann."
+msgstr ""
+"In qualità di Super Admin, è possibile attivare qualsiasi plugin per questa "
+"pagina. Si noti che la pagina standard dei plugin è comunque accessibile "
+"tramite <a href=\"%s\">questo URL</a>."
+
+#. Plugin Name of the plugin/theme
+#: pretty-plugins.php:580
+#, fuzzy
+msgid "PS-Pretty Plugins"
+msgstr "Plugin PS-Pretty"
+
+#: pretty-plugins.php:594
+#, fuzzy
+msgid "Edit"
+msgstr "Modifica"
+
+#: pretty-plugins.php:597
+#, fuzzy
+msgid "Gehe zur Einstellungsseite für PS-Pretty Plugins"
+msgstr "Andate alla pagina delle impostazioni per i plugin PS-Pretty"
+
+#: pretty-plugins.php:597
+msgid "Einstellungen"
+msgstr "Impostazioni"
+
+#: pretty-plugins.php:629
+#, fuzzy
+msgid "Erfolgreich gespeichert"
+msgstr "Salvato con successo"
+
+#: pretty-plugins.php:634
+#, fuzzy
+msgid "Alle benutzerdefinierten Plugin-Daten wurden erfolgreich gelöscht."
+msgstr ""
+"Tutti i dati dei plugin definiti dall'utente sono stati eliminati con "
+"successo."
+
+#: pretty-plugins.php:645
+#, fuzzy
+msgid "Beim Hochladen der Datei ist ein Problem aufgetreten."
+msgstr "Si è verificato un problema durante il caricamento del file."
+
+#: pretty-plugins.php:649
+#, fuzzy
+msgid "Plugin Daten und Einstellungen erfolgreich importiert."
+msgstr "I dati e le impostazioni del plugin sono stati importati con successo."
+
+#: pretty-plugins.php:786
+#, fuzzy
+msgid ""
+"Du hast nicht genügend Berechtigungen, um Plugins für diese Seite zu "
+"verwalten."
+msgstr ""
+"Non si dispone di autorizzazioni sufficienti per gestire i plugin di questa "
+"pagina."
+
+#: pretty-plugins.php:795
+#, fuzzy
+msgid ""
+"Du kannst ein Plugin nicht löschen, während es auf der Hauptseite aktiv ist."
+msgstr ""
+"Non è possibile eliminare un plugin mentre è attivo nella pagina principale."
+
+#: pretty-plugins.php:797
+#, fuzzy, php-format
+msgid ""
+"Das Plugin hat während der Aktivierung %d Zeichen einer <strong>unerwarteten "
+"Ausgabe</strong> generiert. Wenn Du feststellst, dass &#8220;Header bereits "
+"Nachrichten gesendet&#8221 haben, Probleme mit Syndication-Feeds oder andere "
+"Probleme auftreten, deaktiviere oder entferne dieses Plugin."
+msgstr ""
+"Il plugin ha generato %d caratteri di <strong>output inattesi</strong> "
+"durante l'attivazione. Se si nota che \"le intestazioni hanno già inviato "
+"messaggi&amp;#8221, si verificano problemi con i feed di syndication o altri "
+"problemi, disattivare o rimuovere questo plugin."
+
+#: pretty-plugins.php:799
+#, fuzzy
+msgid ""
+"Das Plugin konnte nicht aktiviert werden, da es einen "
+"<strong>schwerwiegenden Fehler</strong> auslöste."
+msgstr ""
+"Non è stato possibile attivare il plugin perché si è verificato un "
+"<strong>errore irreversibile</strong>."
+
+#: pretty-plugins.php:810
+#, fuzzy
+msgid "Plugin <strong>aktiviert</strong>."
+msgstr "Plugin <strong>attivato</strong>."
+
+#: pretty-plugins.php:812
+#, fuzzy
+msgid "Plugin <strong>deaktiviert</strong>."
+msgstr "Plugin <strong>disattivato</strong>."
+
+#: psource/psource-plugin-update/Puc/v4p10/Plugin/Ui.php:54
+#, fuzzy
+msgid "HELPDESK"
+msgstr "HELPDESK"
+
+#: psource/psource-plugin-update/Puc/v4p10/Plugin/Ui.php:77
+#, fuzzy, php-format
+msgid "Weitere Informationen zu %s"
+msgstr "Ulteriori informazioni su %s"
+
+#: psource/psource-plugin-update/Puc/v4p10/Plugin/Ui.php:128
+#, fuzzy
+msgid "Auf Updates prüfen"
+msgstr "Controlla gli aggiornamenti"
+
+#: psource/psource-plugin-update/Puc/v4p10/Plugin/Ui.php:213
+#, fuzzy, php-format
+msgctxt "the plugin title"
+msgid "Das %s-Plugin ist laut PSource Server auf dem neuesten Stand."
+msgstr "Il plugin %s è aggiornato secondo il server PSource."
+
+#: psource/psource-plugin-update/Puc/v4p10/Plugin/Ui.php:215
+#, fuzzy, php-format
+msgctxt "the plugin title"
+msgid "Eine neue Version des %s-Plugins ist auf dem PSource Server verfügbar."
+msgstr "Una nuova versione del plugin %s è disponibile sul server PSource."
+
+#: psource/psource-plugin-update/Puc/v4p10/Plugin/Ui.php:217
+#, fuzzy, php-format
+msgctxt "the plugin title"
+msgid "Es konnte nicht festgestellt werden, ob Updates für %s verfügbar sind."
+msgstr ""
+"Non è stato possibile determinare se sono disponibili aggiornamenti per %s."
+
+#: psource/psource-plugin-update/Puc/v4p10/Plugin/Ui.php:223
+#, fuzzy, php-format
+msgid "Unbekannter Update-Status \"%s\""
+msgstr "Stato di aggiornamento sconosciuto \"%s\""
+
+#: psource/psource-plugin-update/Puc/v4p10/Vcs/PluginUpdateChecker.php:98
+#, fuzzy
+msgid "Es ist kein Änderungsprotokoll verfügbar."
+msgstr "Non è disponibile un registro delle modifiche."
+
+#: themes/3-eight/index.php:35 themes/3-eight/index.php:78
+#: themes/material/index.php:92
+#, fuzzy
+msgid "Erfahre mehr über das Plugin"
+msgstr "Per saperne di più sul plugin"
+
+#: themes/3-eight/index.php:49
+#, fuzzy
+msgid "Kategorien: "
+msgstr "Categorie:"
+
+#: themes/3-eight/index.php:88
+#, fuzzy
+msgid "Zeige mehr"
+msgstr "Mostra di più"
+
+#: themes/material/index.php:54
+#, fuzzy
+msgid "Beginne mit der Eingabe, um zu suchen"
+msgstr "Iniziare a digitare per effettuare la ricerca"
+
+#: themes/material/index.php:109 themes/quick-sand/index.php:86
+#, fuzzy
+msgid "Keine Plugins gefunden."
+msgstr "Nessun plugin trovato."
+
+#: themes/quick-sand/index.php:7
+#, fuzzy
+msgid "Suche:"
+msgstr "Ricerca:"
+
+#: themes/quick-sand/index.php:8
+#, fuzzy
+msgid "Mit Eingabe beginnen, um zu suchen..."
+msgstr "Iniziare a digitare per cercare..."
+
+#: themes/quick-sand/index.php:12
+#, fuzzy
+msgid "Wähle die anzuzeigende Kategorie:"
+msgstr "Selezionare la categoria da visualizzare:"
+
+#: themes/quick-sand/index.php:22
+#, fuzzy
+msgid "Sortieren nach:"
+msgstr "Ordina per:"
+
+#: themes/quick-sand/index.php:57
+#, fuzzy
+msgid "Learn more about the plugin"
+msgstr "Per saperne di più sul plugin"
+
+#: themes/quick-sand/index.php:63
+msgid "Details"
+msgstr "Dettagli"
+
+#. Plugin URI of the plugin/theme
+#, fuzzy
+msgid "https://github.com/cp-psource/piestingtal-source-project/ps-pretty-plugins/"
+msgstr "https://github.com/cp-psource/piestingtal-source-project/ps-pretty-plugins/"
+
+#. Description of the plugin/theme
+#, fuzzy
+msgid ""
+"Verleihe Deinen Plugin-Seiten in Multisite-Netzwerken das Aussehen eines App "
+"Stores mit ausgewählten Bildern, Kategorien und einer erstaunlichen Suche."
+msgstr ""
+"Date alle vostre pagine di plugin nelle reti multisito l'aspetto di un app "
+"store con immagini selezionate, categorie e una ricerca straordinaria."
+
+#. Author of the plugin/theme
+#, fuzzy
+msgid "PSOURCE"
+msgstr "PSOURCE"
+
+#. Author URI of the plugin/theme
+#, fuzzy
+msgid "https://github.com/cp-psource/"
+msgstr "https://github.com/cp-psource/"

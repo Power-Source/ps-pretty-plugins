@@ -1,0 +1,705 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PS-Pretty Plugins\n"
+"POT-Creation-Date: 2023-12-25 00:10+0100\n"
+"PO-Revision-Date: 2023-12-25 00:10+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: pretty-plugins.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: psource/psource-plugin-update/vendor\n"
+
+#: external/psource-help-tooltips.php:296
+msgid "Help"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:8 pretty-plugins.php:541
+msgid "Plugin-Details bearbeiten"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:11
+msgid "Name"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:18
+msgid "Orginal Name"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:25
+msgid "Info URL"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:30
+msgid "Bild URL"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:34
+msgid "Bild Wählen"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:35
+msgid "Bild bearbeiten"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:43 pretty-plugins.php:344
+#: themes/quick-sand/index.php:77
+msgid "Kategorien"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:53
+msgid "bearbeiten"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:74
+msgid "Neue Kategorie"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:75
+#: includes/element-edit-plugin-details.php:82
+msgid "Kategorie bearbeiten"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:81
+msgid "Kategorie hinzufügen"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:81
+msgid "Hinzufügen"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:82
+msgid "Speichern"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:83
+#: includes/element-edit-plugin-details.php:106
+msgid "Abbrechen"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:94
+msgid "Beschreibung"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:98
+msgid "Originalbeschreibung"
+msgstr ""
+
+#: includes/element-edit-plugin-details.php:107
+msgid "Aktualisieren"
+msgstr ""
+
+#: includes/frontend-showcase-files/plugin_list.php:25
+#: includes/frontend-showcase-files/plugin_list.php:65
+msgid "Erfahre mehr über dieses Plugin"
+msgstr ""
+
+#: includes/functions.php:51
+msgid " (Benutzerdefiniert)"
+msgstr ""
+
+#: includes/page-network-admin.php:2
+msgid "PS-Pretty Plugins Einstellungen"
+msgstr ""
+
+#: includes/page-network-admin.php:3
+#, php-format
+msgid ""
+"Auf dieser Seite kannst Du PS-Pretty Plugins konfigurieren. Du kannst "
+"benutzerdefinierte Plugin-Daten für jedes Plugin konfigurieren auf der <a "
+"href=\"%s\">\"Plugins\" Netzwerkseite</a> durch Klicken auf \"Details "
+"bearbeiten\". Klicke <a href=\"%s\">hier</a> um zu sehen, wie es aktuell auf "
+"der Hauptseite aussieht."
+msgstr ""
+
+#: includes/page-network-admin.php:10
+msgid "Allgemeine Einstellungen"
+msgstr ""
+
+#: includes/page-network-admin.php:15
+msgid "Aktiviere Setup-Modus"
+msgstr ""
+
+#: includes/page-network-admin.php:22
+msgid ""
+"Bei der Einstellung \"WAHR\" wird die Plugin-Seite \"PS-Pretty Plugins\" nur "
+"auf der Hauptseite angezeigt. Dieser Modus ist nützlich, um Plugin-Details "
+"zu konfigurieren, bevor die PS-Pretty Plugins-Funktionen an allen Standorten "
+"im Netzwerk aktiviert werden."
+msgstr ""
+
+#: includes/page-network-admin.php:28
+msgid "Darstellung der Plugin-Seite"
+msgstr ""
+
+#: includes/page-network-admin.php:38
+msgid ""
+"Wähle das Design aus, mit dem Du Deine Plugin-Seiten anzeigen möchtest. Du "
+"kannst Deine eigenen Themes hinzufügen im \"wp-content/upload/prettyplugins/"
+"your-theme-/\" Ordner. (Tipp: Dupliziere das Standarddesign von \"wp-content/"
+"plugins/prettyplugins/themes/\" um anzufangen.)"
+msgstr ""
+
+#: includes/page-network-admin.php:44
+msgid "Themen- und Darstellungseinstellungen"
+msgstr ""
+
+#: includes/page-network-admin.php:50
+msgid "Wähle wohin Plugin Links zeigen"
+msgstr ""
+
+#: includes/page-network-admin.php:65
+msgid "Ersten Screenshot automatisch laden"
+msgstr ""
+
+#: includes/page-network-admin.php:72
+msgid ""
+"Wenn kein Bild für ein Plugin festgelegt wurde, wird der erste verfügbare "
+"Screenshot im Plugin-Ordner geladen (Beispiel: Screenshot-1.png)."
+msgstr ""
+
+#: includes/page-network-admin.php:78
+msgid "Screenshot mit korrektem Namen automatisch laden"
+msgstr ""
+
+#: includes/page-network-admin.php:85
+msgid ""
+"Wenn das vorgestellte Bild für ein Plugin nicht festgelegt wurde und sich "
+"ein Bild in \"wp-content/upload/prettyplugins/screenshots/\"  befindet mit "
+"dem richtigen Namen (Beispiel: Plugin-Speicherort -  \"wp-content/plugins/"
+"akismet/akismet.php\", image file - \"akismet-akismet.png\".), wird es "
+"automatisch geladen. Bei dieser Methode funktionieren nur PNG-Dateien"
+msgstr ""
+
+#: includes/page-network-admin.php:91
+msgid "WP.org-Bild automatisch laden"
+msgstr ""
+
+#: includes/page-network-admin.php:98
+msgid ""
+"Wenn kein ausgewähltes Bild für ein Plugin festgelegt wurde, wird ein Bild "
+"aus dem Plugin-Verzeichnis von wordpress.org geladen. Es kann nicht "
+"garantiert werden, dass das Bild gefunden wird."
+msgstr ""
+
+#: includes/page-network-admin.php:104
+msgid "Beschreibungen minimieren"
+msgstr ""
+
+#: includes/page-network-admin.php:111
+msgid ""
+"Wenn \"Wahr\", wird die \"Beschreibung\" des Plugins wird standardmäßig "
+"ausgeblendet und nach dem Klicken auf den Link \"Beschreibungen\" auf der "
+"Seite der Plugins angezeigt. Das Theme muss dies unterstützen"
+msgstr ""
+
+#: includes/page-network-admin.php:116
+msgid "Beschriftungen"
+msgstr ""
+
+#: includes/page-network-admin.php:121
+msgid "Plugin Seitentitel"
+msgstr ""
+
+#: includes/page-network-admin.php:126
+msgid ""
+"Dies ist der Menüpunkt \"Plugins\". Nenne es \"Plugins\", \"Apps\", \"Add-Ons"
+"\" oder was auch immer Du möchtest."
+msgstr ""
+
+#: includes/page-network-admin.php:131
+msgid "Beschreibung der Plugin-Seite"
+msgstr ""
+
+#: includes/page-network-admin.php:136
+msgid ""
+"Dieser Text wird oben auf der Plugins-Seite angezeigt. Sage Deinen "
+"Benutzern, was Du zu bieten hast."
+msgstr ""
+
+#: includes/page-network-admin.php:141
+msgid "Benutzerdefiniertes Link-Label"
+msgstr ""
+
+#: includes/page-network-admin.php:146
+msgid ""
+"Fügt für jedes Plugin einen Link zu einer beliebigen URL hinzu. Zum Beispiel "
+"ein Link zur Unterstützung von Dokumenten für das Plugin."
+msgstr ""
+
+#: includes/page-network-admin.php:152
+msgid "Änderungen speichern"
+msgstr ""
+
+#: includes/page-network-admin.php:155
+msgid "Exportieren and Importieren"
+msgstr ""
+
+#: includes/page-network-admin.php:160
+msgid "Exportieren"
+msgstr ""
+
+#: includes/page-network-admin.php:164
+msgid "Exportdatei herunterladen"
+msgstr ""
+
+#: includes/page-network-admin.php:166
+msgid ""
+"Exportiere Daten und Einstellungen für den späteren Import oder verwende sie "
+"als Konfigurationsdatei. Du kannst die exportierte Datei mit dem Namen "
+"\"config.xml\" in den Ordner \"wp-content/upload/prettyplugins/\" legen, um "
+"Daten und Einstellungen automatisch zu laden."
+msgstr ""
+
+#: includes/page-network-admin.php:166
+msgid ""
+"Beachte dass auch Daten aus der aktuellen Konfigurationsdatei (falls "
+"vorhanden) exportiert werden."
+msgstr ""
+
+#: includes/page-network-admin.php:173
+msgid "Importieren:"
+msgstr ""
+
+#: includes/page-network-admin.php:178
+msgid "Datei hochladen und importieren"
+msgstr ""
+
+#: includes/page-network-admin.php:179
+msgid ""
+"Wähle eine Exportdatei (korrekt formatierte XML-Datei), um Daten und "
+"Einstellungen zu importieren. Diese Aktion ersetzt alle vorhandenen Daten "
+"und Einstellungen."
+msgstr ""
+
+#: includes/page-network-admin.php:185
+msgid "Zurücksetzen:"
+msgstr ""
+
+#: includes/page-network-admin.php:189
+msgid "Are you sure?"
+msgstr ""
+
+#: includes/page-network-admin.php:189
+msgid "Lösche alle benutzerdefinierten Plugin-Daten"
+msgstr ""
+
+#: includes/page-network-admin.php:191
+msgid ""
+"Diese Aktion löscht alle vorhandenen benutzerdefinierten Plugin-Daten "
+"dauerhaft."
+msgstr ""
+
+#: pretty-plugins.php:132 pretty-plugins.php:528
+msgid "Plugins"
+msgstr ""
+
+#: pretty-plugins.php:133
+msgid ""
+"Mit Plugins kannst Du zusätzliche Funktionen auf Deiner Webseite aktivieren! "
+"Hier ist eine Liste dessen, was wir für Dich zur Verfügung haben."
+msgstr ""
+
+#: pretty-plugins.php:134
+msgid "Mehr Information"
+msgstr ""
+
+#: pretty-plugins.php:143
+#, php-format
+msgid ""
+"PS-Pretty Plugins funktioniert nur in Multisite-Konfigurationen. Wie Du "
+"Multisite konfigurierst und benutzt erfährst Du <a href=\"%s\" target="
+"\"_blank\">hier</a>."
+msgstr ""
+
+#: pretty-plugins.php:229
+msgid ""
+"Du hast nicht genügend Berechtigungen, um Plugins für diese Seite zu "
+"aktivieren."
+msgstr ""
+
+#: pretty-plugins.php:259
+msgid ""
+"Du hast nicht genügend Berechtigungen, um Plugins für diese Seite zu "
+"deaktivieren."
+msgstr ""
+
+#: pretty-plugins.php:338
+msgid "Bild"
+msgstr ""
+
+#: pretty-plugins.php:339 pretty-plugins.php:594
+msgid "Code bearbeiten"
+msgstr ""
+
+#: pretty-plugins.php:340
+msgid "Ursprüngliche Beschreibung ein-/ausblenden"
+msgstr ""
+
+#: pretty-plugins.php:341 pretty-plugins.php:590
+msgid "Details bearbeiten"
+msgstr ""
+
+#: pretty-plugins.php:342 pretty-plugins.php:590
+msgid "Bearbeite Plugin-Details wie Titel, Beschreibung, Bild und Kategorien"
+msgstr ""
+
+#: pretty-plugins.php:343
+msgid "Besuche die Hilfeseite des Plugins"
+msgstr ""
+
+#: pretty-plugins.php:345
+msgid ""
+"Wähle ein Bild für den Plugin-Screenshot (empfohlene Größe: 600px auf 450px)"
+msgstr ""
+
+#: pretty-plugins.php:346
+msgid "Bild auswählen"
+msgstr ""
+
+#: pretty-plugins.php:347
+msgid "Bearbeiten"
+msgstr ""
+
+#: pretty-plugins.php:351
+msgid "Nach Kategorie filtern"
+msgstr ""
+
+#: pretty-plugins.php:408
+#, php-format
+msgid "%s Only"
+msgstr ""
+
+#: pretty-plugins.php:418
+msgid "Deaktivieren"
+msgstr ""
+
+#: pretty-plugins.php:423
+msgid "Aktivieren"
+msgstr ""
+
+#: pretty-plugins.php:432 pretty-plugins.php:490 themes/material/index.php:44
+#: themes/quick-sand/index.php:25
+msgid "Aktiv"
+msgstr ""
+
+#: pretty-plugins.php:435
+msgid "Frei"
+msgstr ""
+
+#: pretty-plugins.php:437
+msgid "Nur Pro"
+msgstr ""
+
+#: pretty-plugins.php:488 pretty-plugins.php:490 pretty-plugins.php:528
+#: themes/material/index.php:28 themes/material/index.php:43
+#: themes/quick-sand/index.php:14 themes/quick-sand/index.php:24
+msgid "Alle"
+msgstr ""
+
+#: pretty-plugins.php:490 themes/material/index.php:45
+#: themes/quick-sand/index.php:26
+msgid "Inaktiv"
+msgstr ""
+
+#: pretty-plugins.php:509
+msgid "Suche Installierte Plugins"
+msgstr ""
+
+#: pretty-plugins.php:510
+msgid "Suche nach verfügbaren Plugins:"
+msgstr ""
+
+#: pretty-plugins.php:511
+msgid "Suche installierte Plugins ..."
+msgstr ""
+
+#: pretty-plugins.php:512
+msgid "Suche nach verfügbaren Plugins ..."
+msgstr ""
+
+#: pretty-plugins.php:513
+msgid "Kategorien:"
+msgstr ""
+
+#: pretty-plugins.php:543
+#, php-format
+msgid ""
+"Du kannst die Plugin-Details für jedes Plugin bearbeiten, indem Du auf "
+"\"Details bearbeiten\" klickst. Alle neuen Details werden sichtbar auf <a "
+"href=\"%s\">der Plugins-Seite</a> und verfügbar für alle Netzwerkseiten. Es "
+"ist auch möglich, zusätzliche Einstellungen zu tätigen auf <a href=\"%s"
+"\">dieser Seite</a>."
+msgstr ""
+
+#: pretty-plugins.php:544
+msgid ""
+"<strong>Name</strong> - Ersetze den Namen des Plugins durch einen Deiner "
+"Wahl. Lasse das Feld leer, um den ursprünglichen Namen zu verwenden."
+msgstr ""
+
+#: pretty-plugins.php:545
+msgid ""
+"<strong>Eigene URL</strong> - Erstelle einen externen Plugin-Link zu einer "
+"beliebigen URL Deiner Wahl, z.B. zur Support-Dokumentation."
+msgstr ""
+
+#: pretty-plugins.php:546
+msgid ""
+"<strong>Bild URL</strong> - Stelle das angezeigte Bild für dieses Plugin "
+"ein. Du kannst ein Bild aus Deiner Mediengalerie auswählen oder die URL der "
+"Datei kopieren, die sich unter \"wp-content/uploads/prettyplugins/"
+"screenshots/\" befindet. Alternativ wird eine Datei mit dem richtigen Namen "
+"automatisch geladen, auch wenn dieses Feld leer ist (Beispiel: Speicherort "
+"des Plugins -  \"wp-content/plugins/akismet/akismet.php\", image file - "
+"\"akismet-akismet.png\". Nur PNG Dateien funktionieren mit dieser Methode.). "
+"Die Einstellung \"Screenshot mit korrektem Namen automatisch laden\" muss "
+"auf \"WAHR\" gesetzt sein, damit sie funktioniert. Empfohlene Abmessungen "
+"sind 600px auf 450px."
+msgstr ""
+
+#: pretty-plugins.php:547
+msgid ""
+"<strong>Kategorien</strong> - Hier kannst Du Kategorien festlegen, denen das "
+"Plugin zugewiesen wird. Nicht verwendete Kategorien werden automatisch "
+"gelöscht."
+msgstr ""
+
+#: pretty-plugins.php:548
+msgid ""
+"<strong>Beschreibung</strong> - Ersetze die ursprüngliche Beschreibung des "
+"Plugins durch Deine eigene. Lasse das Feld leer, um das Original zu "
+"verwenden."
+msgstr ""
+
+#: pretty-plugins.php:560
+msgid ""
+"Ersetze den Namen des Plugins durch einen Deiner Wahl. Lasse das Feld leer, "
+"um den ursprünglichen Namen zu verwenden."
+msgstr ""
+
+#: pretty-plugins.php:561
+msgid ""
+"Erstelle einen externen Plugin-Link zu einer beliebigen URL Deiner Wahl, z."
+"B. zur Support-Dokumentation."
+msgstr ""
+
+#: pretty-plugins.php:562
+msgid ""
+"Stelle das angezeigte Bild für dieses Plugin ein. Empfohlene Abmessungen "
+"sind 600px zu 450px. Verwende die Registerkarte \"Hilfe\" (obere rechte "
+"Ecke), um Informationen zur erweiterten Verwendung zu erhalten."
+msgstr ""
+
+#: pretty-plugins.php:563
+msgid ""
+"Hier kannst Du Kategorien festlegen, denen das Plugin zugewiesen wird. Nicht "
+"verwendete Kategorien werden automatisch gelöscht."
+msgstr ""
+
+#: pretty-plugins.php:564
+msgid ""
+"Ersetze die ursprüngliche Beschreibung des Plugins durch Deine eigene. Lasse "
+"das Feld leer, um das Original zu verwenden."
+msgstr ""
+
+#: pretty-plugins.php:569
+#, php-format
+msgid ""
+"PS-Pretty Plugins befindet sich derzeit im \"Setup-Modus\". Diese Erinnerung "
+"verschwindet, nachdem das Plugin konfiguriert und der Setup-Modus auf \"AUS"
+"\" gesetzt wurde. <a href=\"%s\">hier</a>. Du kannst die Details für jedes "
+"Plugin in Deinem Netzwerk <a href=\"%s\">hier</a>  ändern, und kontrolliere, "
+"wie die Seite \"Plugins\" für alle Netzwerkseiten aussieht <a href=\"%s"
+"\">hier</a>."
+msgstr ""
+
+#: pretty-plugins.php:576
+#, php-format
+msgid ""
+"Als Super Admin kannst Du beliebige Plugins für diese Seite aktivieren. "
+"Bitte beachte, dass auf die Standard-Plugin-Seite weiterhin unter <a href="
+"\"%s\">dieser URL</a> zugegriffen werden kann."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: pretty-plugins.php:580
+msgid "PS-Pretty Plugins"
+msgstr ""
+
+#: pretty-plugins.php:594
+msgid "Edit"
+msgstr ""
+
+#: pretty-plugins.php:597
+msgid "Gehe zur Einstellungsseite für PS-Pretty Plugins"
+msgstr ""
+
+#: pretty-plugins.php:597
+msgid "Einstellungen"
+msgstr ""
+
+#: pretty-plugins.php:629
+msgid "Erfolgreich gespeichert"
+msgstr ""
+
+#: pretty-plugins.php:634
+msgid "Alle benutzerdefinierten Plugin-Daten wurden erfolgreich gelöscht."
+msgstr ""
+
+#: pretty-plugins.php:645
+msgid "Beim Hochladen der Datei ist ein Problem aufgetreten."
+msgstr ""
+
+#: pretty-plugins.php:649
+msgid "Plugin Daten und Einstellungen erfolgreich importiert."
+msgstr ""
+
+#: pretty-plugins.php:786
+msgid ""
+"Du hast nicht genügend Berechtigungen, um Plugins für diese Seite zu "
+"verwalten."
+msgstr ""
+
+#: pretty-plugins.php:795
+msgid ""
+"Du kannst ein Plugin nicht löschen, während es auf der Hauptseite aktiv ist."
+msgstr ""
+
+#: pretty-plugins.php:797
+#, php-format
+msgid ""
+"Das Plugin hat während der Aktivierung %d Zeichen einer <strong>unerwarteten "
+"Ausgabe</strong> generiert. Wenn Du feststellst, dass &#8220;Header bereits "
+"Nachrichten gesendet&#8221 haben, Probleme mit Syndication-Feeds oder andere "
+"Probleme auftreten, deaktiviere oder entferne dieses Plugin."
+msgstr ""
+
+#: pretty-plugins.php:799
+msgid ""
+"Das Plugin konnte nicht aktiviert werden, da es einen "
+"<strong>schwerwiegenden Fehler</strong> auslöste."
+msgstr ""
+
+#: pretty-plugins.php:810
+msgid "Plugin <strong>aktiviert</strong>."
+msgstr ""
+
+#: pretty-plugins.php:812
+msgid "Plugin <strong>deaktiviert</strong>."
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v4p10/Plugin/Ui.php:54
+msgid "HELPDESK"
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v4p10/Plugin/Ui.php:77
+#, php-format
+msgid "Weitere Informationen zu %s"
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v4p10/Plugin/Ui.php:128
+msgid "Auf Updates prüfen"
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v4p10/Plugin/Ui.php:213
+#, php-format
+msgctxt "the plugin title"
+msgid "Das %s-Plugin ist laut PSource Server auf dem neuesten Stand."
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v4p10/Plugin/Ui.php:215
+#, php-format
+msgctxt "the plugin title"
+msgid "Eine neue Version des %s-Plugins ist auf dem PSource Server verfügbar."
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v4p10/Plugin/Ui.php:217
+#, php-format
+msgctxt "the plugin title"
+msgid "Es konnte nicht festgestellt werden, ob Updates für %s verfügbar sind."
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v4p10/Plugin/Ui.php:223
+#, php-format
+msgid "Unbekannter Update-Status \"%s\""
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v4p10/Vcs/PluginUpdateChecker.php:98
+msgid "Es ist kein Änderungsprotokoll verfügbar."
+msgstr ""
+
+#: themes/3-eight/index.php:35 themes/3-eight/index.php:78
+#: themes/material/index.php:92
+msgid "Erfahre mehr über das Plugin"
+msgstr ""
+
+#: themes/3-eight/index.php:49
+msgid "Kategorien: "
+msgstr ""
+
+#: themes/3-eight/index.php:88
+msgid "Zeige mehr"
+msgstr ""
+
+#: themes/material/index.php:54
+msgid "Beginne mit der Eingabe, um zu suchen"
+msgstr ""
+
+#: themes/material/index.php:109 themes/quick-sand/index.php:86
+msgid "Keine Plugins gefunden."
+msgstr ""
+
+#: themes/quick-sand/index.php:7
+msgid "Suche:"
+msgstr ""
+
+#: themes/quick-sand/index.php:8
+msgid "Mit Eingabe beginnen, um zu suchen..."
+msgstr ""
+
+#: themes/quick-sand/index.php:12
+msgid "Wähle die anzuzeigende Kategorie:"
+msgstr ""
+
+#: themes/quick-sand/index.php:22
+msgid "Sortieren nach:"
+msgstr ""
+
+#: themes/quick-sand/index.php:57
+msgid "Learn more about the plugin"
+msgstr ""
+
+#: themes/quick-sand/index.php:63
+msgid "Details"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/cp-psource/piestingtal-source-project/ps-pretty-plugins/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Verleihe Deinen Plugin-Seiten in Multisite-Netzwerken das Aussehen eines App "
+"Stores mit ausgewählten Bildern, Kategorien und einer erstaunlichen Suche."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "PSOURCE"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/cp-psource/"
+msgstr ""
