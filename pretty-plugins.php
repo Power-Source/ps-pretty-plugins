@@ -8,7 +8,7 @@ Author URI: https://github.com/Power-Source/
 Network: true
 Text Domain: wmd_prettyplugins
 Domain Path: languages
-Version: 1.0.0
+Version: 1.0.1
 */
 
 /*

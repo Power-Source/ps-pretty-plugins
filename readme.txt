@@ -4,7 +4,7 @@ Tags: multisite, suche, netzwerksuche
 Requires at least: 4.9
 Tested up to: 6.5.5
 ClassicPress: 2.6.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -29,6 +29,10 @@ Für jedes Plugin wird eine feinere Steuerung bereitgestellt. Als Netzwerkadmini
 Mit PS Pretty Plugins hast Du eine beispiellose Kontrolle über das Aussehen und Verhalten der Plugins-Seite. So können Webseiten-Besitzer ihre Plugins einfacher als je zuvor selbst verwalten und neue Funktionen finden und zu ihrer Webseite hinzufügen.
 
 == ChangeLog ==
+
+= 1.0.1 =
+
+* Verbessertes Laden der Logo/Screenshots des jeweiligen Plugins
 
 = 1.0.0 =
 
