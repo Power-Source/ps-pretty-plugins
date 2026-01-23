@@ -6,7 +6,8 @@ title: "PS Pretty Plugins"
 <h2 align="center" style="color:#38c2bb;">PS Pretty Plugins</h2>
 
 <div class="menu">
-  <a href="https://github.com/Power-Source/ps-pretty-plugins/releases" style="color:#38c2bb;">⬇️ Download</a>
+  <a href="https://github.com/Power-Source/ps-pretty-plugins/releases" style="color:#38c2bb;">Download</a>
+  <a href="https://power-source.github.io/ps-update-manager/" style="color:#38c2bb;">PSOURCE MANAGER</a>
 </div>
 
 
@@ -14,29 +15,29 @@ Verleihe Deinen Plugin-Seiten in Multisite-Netzwerken das Aussehen eines App Sto
 
 ## Mit Pretty Plugins kannst Du Plugins in Kategorien gruppieren, ihnen auffällige Funktionsbilder geben und sie in einem benutzerfreundlichen Raster anzeigen.
 
-Mache das Finden und Installieren von Plugins zum Kinderspiel. PS-Pretty Plugins ist ein unverzichtbares Tool für jeden Netzwerkbesitzer. Es bietet eine zentrale Steuerung und Konfiguration der Plugins-Seite jeder Webseite. Kombiniere es mit [PS Bloghosting](https://power-source.github.io/ps-bloghosting//), um einen fantastischen kostenpflichtigen Plugin-Shop zu erstellen.
+Mache das Finden und Installieren von Plugins zum Kinderspiel. PS-Pretty Plugins ist ein unverzichtbares Tool für jeden Netzwerkbesitzer. Es bietet eine zentrale Steuerung und Konfiguration der Plugins-Seite jeder Webseite. Kombiniere es mit [PS Bloghosting](https://power-source.github.io/ps-bloghosting/), um einen fantastischen kostenpflichtigen Plugin-Shop zu erstellen.
 
 Große Symbole und ein vertrautes Rasterlayout sorgen für ein optisch weitaus ansprechenderes Layout im Vergleich zum standardmäßigen Basiseintrag.
 
-![Screenshot der Plugins-Seite mit dem Rasterlayout](https://github.com/Power-Source/wp-content/uploads/2023/12/prettyplugins-ss12.jpg)
+![Screenshot der Plugins-Seite mit dem Rasterlayout](assets/images/prettyplugins-ss12.jpg)
 
   Große Symbole und ein Rasterlayout machen das Entdecken von Plugins zum Kinderspiel
 
   Plugins können in mehrere Kategorien gruppiert werden, die vom Netzwerkadministrator definiert werden, was es Webseitenbesitzern erleichtert, neue Funktionen zu entdecken und zu installieren.
 
-![Screenshot der Plugin-Kategorien](https://github.com/Power-Source/wp-content/uploads/2023/12/prettyplugins-ss2.jpg)
+![Screenshot der Plugin-Kategorien](assets/images/prettyplugins-ss2.jpg)
 
   Gruppiere Plugins in Kategorien, um sie leichter finden zu können
 
   Eine umfassende Einstellungsseite ermöglicht es einem Netzwerkbesitzer, alle Aspekte der Plugins-Seite zu verwalten, einschließlich Titel, Untertitel, Bilder und die Sichtbarkeit von Beschreibungen. Die Einstellungen können sogar exportiert und importiert werden!
 
-![Screenshot der Einstellungsseite](https://github.com/Power-Source/wp-content/uploads/2023/12/prettyplugins-ss11.jpg)
+![Screenshot der Einstellungsseite](assets/images/prettyplugins-ss11.jpg)
 
   Konfiguriere alle Aspekte des Verhaltens und Aussehens der Plugins-Seite
 
   Für jedes Plugin wird eine genauere Steuerung bereitgestellt. Als Netzwerkadministrator kannst Du den Plugin-Namen, den Link und die Beschreibung überschreiben – Du kannst das Plugin beliebig vielen vorhandenen Kategorien zuweisen oder neue erstellen – und Du kannst ein vorgestelltes Bild laden.
 
-![Screenshot der Plugin-Details-Bearbeitungsfunktion](https://github.com/Power-Source/wp-content/uploads/2023/12/prettyplugins-ss41.jpg)
+![Screenshot der Plugin-Details-Bearbeitungsfunktion](assets/images/prettyplugins-ss41.jpg)
 
   Überschreibe alle Plugin-Attribute
 
@@ -52,11 +53,11 @@ Wenn Du neu bei Word/ClassicPress bist, Beachte dass dieses Plugin nur für Mult
 
 Nach der Installation und Aktivierung siehst Du in Deinem Menü „Netzwerkeinstellungen“ einen neuen Menüpunkt: PS Pretty Plugins. Klicke jetzt auf den Menüpunkt PS Pretty Plugins.
 
-![pretty-plugins-1000-menu](https://github.com/Power-Source/wp-content/uploads/2023/12/pretty-plugins-1000-menu.png)
+![pretty-plugins-1000-menu](assets/images/pretty-plugins-1000-menu.png)
 
   Die Einstellungen sind recht einfach. Aber lasse uns sie trotzdem durchgehen, ja? 
 
-![1\. Setup-Modus aktivieren/deaktivieren. 2\. Wähle Dein bevorzugtes Design. 3\. Wähle das Ziel des Plugin-Links aus. 4\. Wähle Deine Screenshot-Einstellungen aus. 5\. Plugin-Beschreibungen ein-/ausblenden. 6\. Passe die Beschriftungen an.](https://github.com/Power-Source/wp-content/uploads/2023/12/pretty-plugins-1000-settings.png)
+![1\. Setup-Modus aktivieren/deaktivieren. 2\. Wähle Dein bevorzugtes Design. 3\. Wähle das Ziel des Plugin-Links aus. 4\. Wähle Deine Screenshot-Einstellungen aus. 5\. Plugin-Beschreibungen ein-/ausblenden. 6\. Passe die Beschriftungen an.](assets/images/pretty-plugins-1000-settings.png)
 
   1\. Setup-Modus aktivieren/deaktivieren.
 2\. Wähle Dein bevorzugtes Design.
