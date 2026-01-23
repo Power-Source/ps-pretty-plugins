@@ -74,7 +74,7 @@ Nach der Installation und Aktivierung siehst Du in Deinem Menü „Netzwerkeinst
 
 4\. Hier wählen wir aus, welche Screenshots für Plugins verwendet und angezeigt werden sollen.
 
-* Wenn „WAHR“ eingestellt ist, verwendet _Ersten Screenshot automatisch laden_ den ersten verfügbaren Screenshot im Plugin-Ordner. Dadurch wird Pretty Plugins angewiesen, nach einer Datei namens _screenshot-1.png_ zu suchen. Wenn diese Datei nicht in einem Plugin-Ordner vorhanden ist, wird für dieses Plugin nichts angezeigt.
+* Wenn „WAHR" eingestellt ist, verwendet _Ersten Screenshot automatisch laden_ automatisch Screenshots aus dem Plugin-Root-Verzeichnis. Dadurch wird Pretty Plugins angewiesen, im Hauptverzeichnis des Plugins nach Bildern zu suchen - zuerst _screenshot-1.png_, dann _logo.png_ und zuletzt _logo.jpg_. Wenn keine dieser Dateien vorhanden ist, wird für dieses Plugin nichts angezeigt.
 * Wenn auf WAHR gesetzt, weist _Screenshot automatisch mit korrektem Namen laden_ Pretty Plugins an, in Deinem Ordner /wp-content/upload/prettyplugins/screenshots/ nach Dateien zu suchen, die _Du_ dort mit den richtigen Namen hochgeladen hast.
      * Wenn sich das Plugin beispielsweise unter _wp-content/plugins/akismet/akismet.php_ befindet, sollte der Screenshot-Name _akismet-akismet.png_ lauten. Beachte, dass mit dieser Methode nur PNG-Bilder funktionieren.
 

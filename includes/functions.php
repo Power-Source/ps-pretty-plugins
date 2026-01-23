@@ -80,9 +80,35 @@ class WMD_PrettyPlugins_Functions {
 			$screenshot_value = $this->plugin_dir_url_custom.'screenshots/'.$screenshot_value;
 		elseif(empty($screenshot_value) && $this->options['plugins_auto_screenshots_by_name'] && file_exists($this->plugin_dir_custom.'screenshots/'.$plugin_path_slug.'.png'))
 			$screenshot_value = $this->plugin_dir_url_custom.'screenshots/'.$plugin_path_slug.'.png';
-		elseif(empty($screenshot_value) && $this->options['plugins_auto_screenshots'] && file_exists(plugin_dir_path(WP_PLUGIN_DIR.'/'.$plugin_path).'screenshot-1.png'))
-			$screenshot_value = plugins_url('screenshot-1.png', $plugin_path);
-		elseif($get_default && (empty($screenshot_value) || (!empty($screenshot_value) && count(explode('/', $screenshot_value)) == 1 && !file_exists($this->plugin_dir_custom.'screenshots/'.$screenshot_value)))) {
+		
+		// Suche nach screenshot-1.png, logo.png oder logo.jpg im Plugin-Root-Verzeichnis - UNABHÄNGIG von $get_default
+		if(empty($screenshot_value) && isset($this->options['plugins_auto_screenshots']) && $this->options['plugins_auto_screenshots']) {
+			$plugin_dir = plugin_dir_path(WP_PLUGIN_DIR.'/'.$plugin_path);
+			$plugin_url_base = WP_CONTENT_URL . '/plugins/' . dirname($plugin_path);
+			
+			// Priorität: screenshot-1.png > Screenshot-1.png > logo.png > Logo.png > logo.jpg > Logo.jpg
+			if(file_exists($plugin_dir.'screenshot-1.png')) {
+				$screenshot_value = $plugin_url_base . '/screenshot-1.png';
+			}
+			elseif(file_exists($plugin_dir.'Screenshot-1.png')) {
+				$screenshot_value = $plugin_url_base . '/Screenshot-1.png';
+			}
+			elseif(file_exists($plugin_dir.'logo.png')) {
+				$screenshot_value = $plugin_url_base . '/logo.png';
+			}
+			elseif(file_exists($plugin_dir.'Logo.png')) {
+				$screenshot_value = $plugin_url_base . '/Logo.png';
+			}
+			elseif(file_exists($plugin_dir.'logo.jpg')) {
+				$screenshot_value = $plugin_url_base . '/logo.jpg';
+			}
+			elseif(file_exists($plugin_dir.'Logo.jpg')) {
+				$screenshot_value = $plugin_url_base . '/Logo.jpg';
+			}
+		}
+		
+		// Fallback nur wenn $get_default = 1 UND immer noch kein Bild gefunden
+		if($get_default && empty($screenshot_value)) {
 			if($this->options['plugins_auto_screenshots_wp']) {
 				$plugin_path_parts = explode("/", $plugin_path);
 				$screenshot_value = '//ps.w.org/'.$plugin_path_parts[0].'/assets/icon-128x128.png';

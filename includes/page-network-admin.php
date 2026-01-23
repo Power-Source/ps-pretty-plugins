@@ -69,7 +69,7 @@
 					<select name="wmd_prettyplugins_options[plugins_auto_screenshots]">
 						<?php $this->the_select_options(array(), $this->options['plugins_auto_screenshots']); ?>
 					</select>
-					<p class="description"><?php _e('Wenn kein Bild für ein Plugin festgelegt wurde, wird der erste verfügbare Screenshot im Plugin-Ordner geladen (Beispiel: Screenshot-1.png).', 'wmd_prettyplugins') ?></p>
+				<p class="description"><?php _e('Wenn kein Bild für ein Plugin festgelegt wurde, wird automatisch nach screenshot-1.png, logo.png oder logo.jpg im Plugin-Root-Verzeichnis gesucht (in dieser Reihenfolge).', 'wmd_prettyplugins') ?></p>
 				</td>
 			</tr>
 
