@@ -513,6 +513,10 @@ class WMD_PrettyPlugins_Functions {
 
 
 	function prosite_plugin_available($plugin_file) {
+		if (!isset($this->pro_site_settings['pp_plugins'])) {
+			return true;
+		}
+		
 		$psts_plugins = $this->pro_site_settings['pp_plugins'];
 
 		if(isset($psts_plugins[$plugin_file]['level']) && $psts_plugins[$plugin_file]['level'] != 0 && is_numeric($psts_plugins[$plugin_file]['level']) && !is_super_admin())
@@ -527,6 +531,11 @@ class WMD_PrettyPlugins_Functions {
 
 	function prosite_plugin_required_level_name($plugin_file) {
 		global $psts;
+		
+		if (!isset($this->pro_site_settings['pp_plugins'])) {
+			return true;
+		}
+		
 		$psts_plugins = $this->pro_site_settings['pp_plugins'];
 
 		if(isset($psts_plugins[$plugin_file]['level']) && $psts_plugins[$plugin_file]['level'] != 0 && is_numeric($psts_plugins[$plugin_file]['level'])) {
