@@ -1,18 +1,18 @@
 <?php
 /*
 Plugin Name: PS Pretty Plugins
-Plugin URI: https://power-source.github.io/ps-pretty-plugins/
-Description: Verleihe Deinen Plugin-Seiten in Multisite-Netzwerken das Aussehen eines App Stores mit ausgewählten Bildern, Kategorien und einer erstaunlichen Suche.
+Plugin URI: https://psource.eimen.net/wiki/ps-pretty-plugins/
+Description: Verleihe Deiner Multisite-Plugin-Seite einen modernen App-Store-Look – mit Bildern, Kategorien, Suche und einer übersichtlichen Darstellung Deiner Plugins.
 Author: PSOURCE
-Author URI: https://github.com/Power-Source/
+Author URI:https://psource.eimen.net/
 Network: true
 Text Domain: wmd_prettyplugins
 Domain Path: languages
-Version: 1.0.1
+Version: 1.0.2
 */
 
 /*
-Copyright 2018-2026 PSOURCE (https://github.com/Power-Source)
+Copyright 2018-2026 PSOURCE (https://psource.eimen.net/)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License (Version 2 - GPLv2) as published by
