@@ -419,10 +419,15 @@ class WMD_PrettyPlugins_Functions {
 					if(isset($category_key) && $category_key)
 						$plugins_categories_replace[$key] = $category_key;
 					elseif(isset($this->plugins_categories[$key]) && $this->plugins_categories[$key] != $value) {
-						if(!$last_category) {
-							end($this->plugins_categories);
-							$last_category = key($this->plugins_categories);
-							$last_category = substr($last_category, 8);
+						if ( ! $last_category ) {
+							$category_keys = array_keys( $this->plugins_categories );
+							$last_category_key = end( $category_keys );
+
+							if ( is_string( $last_category_key ) && strlen( $last_category_key ) > 8 ) {
+								$last_category = (int) substr( $last_category_key, 8 );
+							} else {
+								$last_category = 0;
+							}
 						}
 
 						$last_category ++;
@@ -457,14 +462,15 @@ class WMD_PrettyPlugins_Functions {
 
 			$plugin_custom_data_to_import = array();
 			foreach($plugins_to_import as $key => $value) {
-				if(isset($value['Path'])) {
-					$path = $value['Path'];
-					unset($value['Path']);
-					unset($value['ScreenShotID']);
+				if ( isset( $value['Path'] ) && is_string( $value['Path'] ) && '' !== trim( $value['Path'] ) ) {
+					$path = trim( $value['Path'] );
+
+					unset( $value['Path'], $value['ScreenShotID'] );
 
 					//fix for single plugin category in xml
-					if(isset($value['Categories']['item']) && !is_array($value['Categories']['item']))
-						$value['Categories']['item'] = array(0 => $value['Categories']['item']);
+					if ( isset( $value['Categories']['item'] ) && ! is_array( $value['Categories']['item'] ) ) {
+						$value['Categories']['item'] = array( $value['Categories']['item'] );
+					}
 
 					//Merges old categories with new one
 					if(isset($value['Categories']['item']) && isset($plugins_categories_replace) && $plugins_categories_replace) {
@@ -477,12 +483,18 @@ class WMD_PrettyPlugins_Functions {
 								$new_categories[] = $category;
 						}
 
-						if(!$config && isset($this->plugins_custom_data[$path]['Categories'])) {
-							$value['Categories'] = array_merge_recursive($this->plugins_custom_data[$path]['Categories'], $new_categories);
-							$value['Categories'] = array_unique($value['Categories']);
-						}
-						else
+						if ( ! $config && isset( $this->plugins_custom_data[ $path ]['Categories'] ) ) {
+							$value['Categories'] = array_values(
+								array_unique(
+									array_merge(
+										(array) $this->plugins_custom_data[ $path ]['Categories'],
+										$new_categories
+									)
+								)
+							);
+						} else {
 							$value['Categories'] = $new_categories;
+						}
 					}
 					elseif(isset($value['Categories']['item']))
 						$value['Categories'] = $value['Categories']['item'];
@@ -514,7 +526,7 @@ class WMD_PrettyPlugins_Functions {
 	}
 
 	function export_xml_data_setting_file() {
-		if(wp_verify_nonce($_REQUEST['_wpnonce'], 'wmd_prettyplugins_options')) {
+		if ( isset( $_REQUEST['_wpnonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_REQUEST['_wpnonce'] ) ), 'wmd_prettyplugins_options' ) ) {
 			//rename categories to remove "config" part and merges
 			$plugins_categories_xml = array();
 			$plugins_categories_config_ready = array();
@@ -547,9 +559,15 @@ class WMD_PrettyPlugins_Functions {
 						else
 							$new_categories[] = $category;
 					}
-					if(isset($this->plugins_custom_data[$path]['Categories'])) {
-						$value['Categories'] = array_merge_recursive($this->plugins_custom_data[$path]['Categories'], $new_categories);
-						$value['Categories'] = array_unique($value['Categories']);
+					if ( isset( $this->plugins_custom_data[ $path ]['Categories'] ) ) {
+						$value['Categories'] = array_values(
+							array_unique(
+								array_merge(
+									(array) $this->plugins_custom_data[ $path ]['Categories'],
+									$new_categories
+								)
+							)
+						);
 					}
 					else
 						$value['Categories'] = $new_categories;

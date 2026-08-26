@@ -282,7 +282,7 @@ class PSource_HelpTooltipsDyn {
 		else return false;
 
 		// Initialize bound selectors
-		$selectors = json_encode($this->_bound_selectors);
+		$selectors = wp_json_encode( $this->_bound_selectors );
 
 		?>
 <script type="text/javascript">

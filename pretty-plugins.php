@@ -281,10 +281,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			wp_enqueue_script('wmd-prettyplugins-theme');
 
 			//used on old theme only?
-			if(isset($_REQUEST['category']))
-				$show_category = $_REQUEST['category'];
-			else
-				$show_category = 'all';
+			$show_category = isset( $_GET['category'] ) ? sanitize_key( wp_unslash( $_GET['category'] ) ) : 'all';
 			$params = array(
 				'show_category' => $show_category,
 				'show_status' => 'all'
@@ -313,7 +310,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			$plugins_custom_data_ready = $this->get_converted_plugins_data_for_js($this->get_merged_plugins_custom_data());
 
 			$plugins_categories_ready = $this->get_merged_plugins_categories();
-			$protocol = isset( $_SERVER["HTTPS"] ) ? 'https://' : 'http://'; //This is used to set correct adress if secure protocol is used so ajax calls are working
+			$protocol = is_ssl() ? 'https://' : 'http://'; //This is used to set correct adress if secure protocol is used so ajax calls are working
 			$params = array(
 				'js_wp_version' => version_compare($wp_version, '4.6', '>=') ? 2 : 1,
 				'ajax_url' => admin_url( 'admin-ajax.php', $protocol ),
@@ -334,7 +331,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 				'plugin_categories' => $plugins_categories_ready,
 				'network_only_plugins' => $network_only_plugins,
 				'filter_by' => __('Nach Kategorie filtern', 'wmd_prettyplugins'),
-				'current_category' => (isset($_REQUEST['category']) ? $_REQUEST['category'] : '')
+				'current_category' => isset( $_GET['category'] ) ? sanitize_key( wp_unslash( $_GET['category'] ) ) : ''
 			);
 			wp_localize_script( 'wmd-prettyplugins-network-admin', 'wmd_pl_na', $params );
 
@@ -646,116 +643,248 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 	}
 
 	function add_category_ajax() {
-		// error_reporting(0); // Entfernt - unterdrückt Fehler
 		$error = 0;
+		$new_key = '';
 
-		//loads variables for ajax call
-		$this->plugins_categories = get_site_option('wmd_prettyplugins_plugins_categories', array());
+		$this->plugins_categories = get_site_option(
+			'wmd_prettyplugins_plugins_categories',
+			array()
+		);
 
-		if(wp_verify_nonce($_POST['_wpnonce'], 'wmd_prettyplugins_edit_plugin_details')) {
-			$last_category = $this->get_last_category_id();
-			$last_category++;
-			$new_key = 'category'.$last_category;
-
-			$this->plugins_categories[$new_key] = $_POST['plugin_new_category'];
-
-			if(!empty($this->plugins_categories[$new_key]) && !empty($_POST['plugin_new_category']))
-				update_site_option('wmd_prettyplugins_plugins_categories', $this->plugins_categories);
-			else
-				$error = 1;
-		}
-		else
+		if (
+			! isset( $_POST['_wpnonce'] ) ||
+			! wp_verify_nonce(
+				sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ),
+				'wmd_prettyplugins_edit_plugin_details'
+			)
+		) {
 			$error = 1;
+		} else {
+			$category_name = isset( $_POST['plugin_new_category'] )
+				? sanitize_text_field( wp_unslash( $_POST['plugin_new_category'] ) )
+				: '';
 
-		echo json_encode(array('id' => $new_key, 'name' => $_POST['plugin_new_category'], 'error' => $error));
-		die();
+			if ( '' !== $category_name ) {
+				$last_category = $this->get_last_category_id();
+				$last_category++;
+				$new_key = 'category' . $last_category;
+
+				$this->plugins_categories[ $new_key ] = $category_name;
+
+				update_site_option(
+					'wmd_prettyplugins_plugins_categories',
+					$this->plugins_categories
+				);
+			} else {
+				$error = 1;
+			}
+		}
+
+		echo wp_json_encode(
+			array(
+				'id'    => $new_key,
+				'name'  => $category_name ?? '',
+				'error' => $error,
+			)
+		);
+
+		wp_die();
 	}
 
 	function save_category_ajax() {
-		// error_reporting(0); // Entfernt - unterdrückt Fehler
 		$error = 0;
 
-		//loads variables for ajax call
-		$this->plugins_categories = get_site_option('wmd_prettyplugins_plugins_categories', array());
+		$this->plugins_categories = get_site_option(
+			'wmd_prettyplugins_plugins_categories',
+			array()
+		);
 
-		if(wp_verify_nonce($_POST['_wpnonce'], 'wmd_prettyplugins_edit_plugin_details')) {
-			if(isset($this->plugins_categories[$_POST['plugin_edit_category_key']]) && !empty($_POST['plugin_edit_category']) && $_POST['plugin_edit_category_key']) {
-				$this->plugins_categories[$_POST['plugin_edit_category_key']] = $_POST['plugin_edit_category'];
-				update_site_option('wmd_prettyplugins_plugins_categories', $this->plugins_categories);
-			}
-			else
-				$error = 1;
-		}
-		else
+		if (
+			! isset( $_POST['_wpnonce'] ) ||
+			! wp_verify_nonce(
+				sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ),
+				'wmd_prettyplugins_edit_plugin_details'
+			)
+		) {
 			$error = 1;
+		} else {
+			$category_key = isset( $_POST['plugin_edit_category_key'] )
+				? sanitize_key( wp_unslash( $_POST['plugin_edit_category_key'] ) )
+				: '';
 
-		echo json_encode(array('id' => $_POST['plugin_edit_category_key'], 'name' => $_POST['plugin_edit_category'], 'error' => $error));
-		die();
+			$category_name = isset( $_POST['plugin_edit_category'] )
+				? sanitize_text_field( wp_unslash( $_POST['plugin_edit_category'] ) )
+				: '';
+
+			if (
+				'' !== $category_key &&
+				isset( $this->plugins_categories[ $category_key ] ) &&
+				'' !== $category_name
+			) {
+				$this->plugins_categories[ $category_key ] = $category_name;
+
+				update_site_option(
+					'wmd_prettyplugins_plugins_categories',
+					$this->plugins_categories
+				);
+			} else {
+				$error = 1;
+			}
+		}
+
+		echo wp_json_encode(
+			array(
+				'id'    => $category_key ?? '',
+				'name'  => $category_name ?? '',
+				'error' => $error,
+			)
+		);
+
+		wp_die();
 	}
 
 	function save_plugin_details_ajax() {
 		// error_reporting(0); // Entfernt - unterdrückt Fehler
 		$error = 0;
 
-		//loads variables for ajax call
-		$this->plugins_categories = get_site_option('wmd_prettyplugins_plugins_categories', array());
-		$this->plugins_custom_data = get_site_option('wmd_prettyplugins_plugins_custom_data', array());
-		$this->plugins_custom_data_config = get_site_option('wmd_prettyplugins_plugins_custom_data_config', array());
+		// Loads variables for AJAX call.
+		$this->plugins_categories = get_site_option(
+			'wmd_prettyplugins_plugins_categories',
+			array()
+		);
 
-		if(wp_verify_nonce($_POST['_wpnonce'], 'wmd_prettyplugins_edit_plugin_details')) {
-			if(is_numeric($_POST['plugin_image_id']))
-				$_POST['plugin_image_url'] = $this->get_resized_attachment_url( $_POST['plugin_image_id'] );
+		$this->plugins_custom_data = get_site_option(
+			'wmd_prettyplugins_plugins_custom_data',
+			array()
+		);
 
-			foreach($_POST['plugin_categories'] as $key => $category)
-				if(strpos($category, 'config') !== false)
-					unset($_POST['plugin_categories'][$key]);
+		$this->plugins_custom_data_config = get_site_option(
+			'wmd_prettyplugins_plugins_custom_data_config',
+			array()
+		);
 
-			if(!isset($this->plugins_custom_data[$_POST['plugin_path']]))
-				$this->plugins_custom_data[$_POST['plugin_path']] = array();
+		if (
+			isset( $_POST['_wpnonce'] ) &&
+			wp_verify_nonce(
+				sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ),
+				'wmd_prettyplugins_edit_plugin_details'
+			)
+		) {
+			$plugin_image_id = isset( $_POST['plugin_image_id'] )
+				? absint( $_POST['plugin_image_id'] )
+				: 0;
+
+			$plugin_image_url = isset( $_POST['plugin_image_url'] )
+				? esc_url_raw( wp_unslash( $_POST['plugin_image_url'] ) )
+				: '';
+
+			if ( $plugin_image_id > 0 ) {
+				$resized_image_url = $this->get_resized_attachment_url( $plugin_image_id );
+
+				if ( $resized_image_url ) {
+					$plugin_image_url = $resized_image_url;
+				}
+			}
+
+			$plugin_categories = isset( $_POST['plugin_categories'] ) && is_array( $_POST['plugin_categories'] )
+				? array_map( 'sanitize_key', wp_unslash( $_POST['plugin_categories'] ) )
+				: array();
+
+			$plugin_categories = array_filter(
+				$plugin_categories,
+				static function ( $category ) {
+					return strpos( $category, 'config' ) === false;
+				}
+			);
+
+			$plugin_path = isset( $_POST['plugin_path'] )
+				? sanitize_text_field( wp_unslash( $_POST['plugin_path'] ) )
+				: '';
+
+			if ( '' === $plugin_path ) {
+				$error = 1;
+			} elseif ( ! isset( $this->plugins_custom_data[ $plugin_path ] ) ) {
+				$this->plugins_custom_data[ $plugin_path ] = array();
+			}
+
+			$plugin_custom_url = isset( $_POST['plugin_custom_url'] )
+				? esc_url_raw( wp_unslash( $_POST['plugin_custom_url'] ) )
+				: '';
+
+			$plugin_description = isset( $_POST['plugin_description'] )
+				? sanitize_textarea_field( wp_unslash( $_POST['plugin_description'] ) )
+				: '';
+
+			$plugin_name = isset( $_POST['plugin_name'] )
+				? sanitize_text_field( wp_unslash( $_POST['plugin_name'] ) )
+				: '';
 
 			$data = array(
-				'Categories' => $_POST['plugin_categories'],
-				'ScreenShot' => $_POST['plugin_image_url'],
-				'ScreenShotID' => $_POST['plugin_image_id'],
-				'CustomLink' => $_POST['plugin_custom_url'],
-				'Description' => $_POST['plugin_description'],
-				'Name' => $_POST['plugin_name'],
+				'Categories'   => $plugin_categories,
+				'ScreenShot'   => $plugin_image_url,
+				'ScreenShotID' => $plugin_image_id,
+				'CustomLink'   => $plugin_custom_url,
+				'Description'  => $plugin_description,
+				'Name'         => $plugin_name,
 			);
-			foreach ($data as $name => $value)
-				if(!empty($data[$name]))
-					$this->plugins_custom_data[$_POST['plugin_path']][$name] = $value;
-				else
-					unset($this->plugins_custom_data[$_POST['plugin_path']][$name]);
+			foreach ( $data as $name => $value ) {
+				if ( ! empty( $value ) ) {
+					$this->plugins_custom_data[ $plugin_path ][ $name ] = $value;
+				} else {
+					unset( $this->plugins_custom_data[ $plugin_path ][ $name ] );
+				}
+			}
 
-			//empty categories fix
-			if(count($this->plugins_custom_data[$_POST['plugin_path']]['Categories']) < 1)
-				unset($this->plugins_custom_data[$_POST['plugin_path']]['Categories']);
+			// Empty categories fix.
+			if ( isset( $this->plugins_custom_data[ $plugin_path ]['Categories'] ) && count( $this->plugins_custom_data[ $plugin_path ]['Categories'] ) < 1 ) {
+				unset( $this->plugins_custom_data[ $plugin_path ]['Categories'] );
+			}
 
-			//adds http to custom link
-			if(isset($this->plugins_custom_data[$_POST['plugin_path']]['CustomLink']))
-				if (strpos($this->plugins_custom_data[$_POST['plugin_path']]['CustomLink'], '://') === false  && count(explode('/', $this->themes_custom_data[$_POST['plugin_path']]['CustomLink'])) > 1)
-					$this->plugins_custom_data[$_POST['plugin_path']]['CustomLink'] = 'http://'.$this->plugins_custom_data[$_POST['plugin_path']]['CustomLink'];
+			// Add http to custom link when a URL scheme is missing.
+			if ( isset( $this->plugins_custom_data[ $plugin_path ]['CustomLink'] ) ) {
+				$custom_link = $this->plugins_custom_data[ $plugin_path ]['CustomLink'];
 
-			//remove unused categories if necessary
-			$removed_categories = $all_used_categories = array();
-			foreach ($this->plugins_custom_data as $path => $data)
-				if(isset($data['Categories']))
-					$all_used_categories = array_merge($all_used_categories, $data['Categories']);
-			foreach ($this->plugins_categories as $key => $category_name)
-				if(!in_array($key, $all_used_categories)) {
-					$update_categories = 1;
-					unset($this->plugins_categories[$key]);
+				if ( strpos( $custom_link, '://' ) === false && count( explode( '/', $custom_link ) ) > 1 ) {
+					$this->plugins_custom_data[ $plugin_path ]['CustomLink'] = 'http://' . $custom_link;
+				}
+			}
+
+			// Remove unused categories if necessary.
+			$removed_categories = array();
+			$all_used_categories = array();
+
+			foreach ( $this->plugins_custom_data as $data ) {
+				if ( isset( $data['Categories'] ) && is_array( $data['Categories'] ) ) {
+					$all_used_categories = array_merge(
+						$all_used_categories,
+						$data['Categories']
+					);
+				}
+			}
+
+			foreach ( $this->plugins_categories as $key => $category_name ) {
+				if ( ! in_array( $key, $all_used_categories, true ) ) {
+					unset( $this->plugins_categories[ $key ] );
 					$removed_categories[] = $key;
 				}
-			if(isset($update_categories))
-				update_site_option('wmd_prettyplugins_plugins_categories', $this->plugins_categories);
+			}
+
+			if ( ! empty( $removed_categories ) ) {
+				update_site_option(
+					'wmd_prettyplugins_plugins_categories',
+					$this->plugins_categories
+				);
+			}
 
 			$plugins_custom_data_ready = $this->get_converted_plugins_data_for_js($this->get_merged_plugins_custom_data());
-			if(empty($plugins_custom_data_ready[$_POST['plugin_path']]))
-				$error = 1;
 
-			if(empty($this->plugins_custom_data[$_POST['plugin_path']]))
-				unset($this->plugins_custom_data[$_POST['plugin_path']]);
+			if ( empty( $plugins_custom_data_ready[ $plugin_path ] ) ) {
+				$error = 1;
+			}
+
+			if ( empty( $this->plugins_custom_data[ $plugin_path ] ) ) {
+				unset( $this->plugins_custom_data[ $plugin_path ] );
+			}
 
 			ksort($this->plugins_custom_data);
 			update_site_option('wmd_prettyplugins_plugins_custom_data', $this->plugins_custom_data);
@@ -763,8 +892,15 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 		else
 			$error = 1;
 
-		echo json_encode(array('new_details' => $plugins_custom_data_ready[$_POST['plugin_path']], 'remove_categories' => $removed_categories, 'error' => $error));
-		die();
+		echo wp_json_encode(
+			array(
+				'new_details'      => $plugins_custom_data_ready[ $plugin_path ] ?? array(),
+				'remove_categories' => $removed_categories,
+				'error'             => $error,
+			)
+		);
+
+		wp_die();
 	}
 
 	function new_plugin_page() {
