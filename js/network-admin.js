@@ -339,7 +339,19 @@ function prettyplugins_load_data() {
 				    plugin_column : plugin_plugin_column,
 				    description_column : plugin_description_column
 				};
-				plugin_table.append( '<td class="column-image desc"><img class="plugin-image" width="100" height="75" src="'+wmd_pl_na.theme_url+'images/default_screenshot.png" alt="'+name+'"/></td>' );
+				var plugin_image = jQuery('<img>', {
+					class: 'plugin-image',
+					width: 100,
+					height: 75,
+					src: wmd_pl_na.theme_url + 'images/default_screenshot.png',
+					alt: plugin_name
+				});
+
+				plugin_table.append(
+					jQuery('<td>', {
+						class: 'column-image desc'
+					}).append(plugin_image)
+				);
 
 				prettyplugins_plugin_add_data(plugin_path);
 			}

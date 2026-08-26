@@ -429,7 +429,9 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 
 			if(isset($plugin_prepare['Categories']) && count($plugin_prepare['Categories']) > 0) {
 				foreach ($plugin_prepare['Categories'] as $plugin_category_key)
-					$plugin_prepare['CategoriesNames'][] = $plugins_categories[$plugin_category_key];
+				if ( isset( $plugins_categories[ $plugin_category_key ] ) ) {
+					$plugin_prepare['CategoriesNames'][] = $plugins_categories[ $plugin_category_key ];
+				}
 			}
 
 			if($plugin_prepare['ActionLinkClass'] == 'upgrade') {
@@ -460,7 +462,15 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			$this->plugins_data[$plugin_path] = apply_filters('wmd_prettyplugins_plugins_data', $plugin_prepare);
 		}
 
-		uasort($this->plugins_data, array($this, 'compare_by_name'));
+		uasort(
+			$this->plugins_data,
+			static function ( $a, $b ) {
+				return strnatcasecmp(
+					$a['Name'] ?? '',
+					$b['Name'] ?? ''
+				);
+			}
+		);
 
 		$search = isset($_GET['search']) ? $_GET['search'] : (isset($_GET['plugin-search']) ? $_GET['plugin-search'] : '');
 		$category = isset($_GET['category']) ? $_GET['category'] : (isset($_GET['plugin-category']) ? $_GET['plugin-category'] : '');
@@ -470,11 +480,6 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 			$categories = array_merge(array('all' => __( 'Alle', 'wmd_prettyplugins' )), $plugins_categories);
 		} else {
 			$categories = array_merge(array('all' => __( 'Alle', 'wmd_prettyplugins' ), 'active' => __( 'Aktiv', 'wmd_prettyplugins' ), 'inactive' => __( 'Inaktiv', 'wmd_prettyplugins' )), $plugins_categories);
-		}
-		
-		// Vergleichsfunktion, die Integer-Werte zurückgibt
-		function compare_by_name($a, $b) {
-			return strnatcasecmp($a['name'], $b['name']);
 		}
 
 		wp_localize_script($script_name, '_wpPluginsSettings', array(
