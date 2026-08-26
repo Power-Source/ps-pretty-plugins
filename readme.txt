@@ -30,10 +30,11 @@ Mit PS Pretty Plugins hast Du eine beispiellose Kontrolle über das Aussehen und
 
 == ChangeLog ==
 
-= 1.0.1 =
+= 1.0.2 =
+* XML Import/Export modernisiert
 
+= 1.0.1 =
 * Verbessertes Laden der Logo/Screenshots des jeweiligen Plugins
 
 = 1.0.0 =
-
 * Public release

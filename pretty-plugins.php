@@ -646,7 +646,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 	}
 
 	function add_category_ajax() {
-		error_reporting(0);
+		// error_reporting(0); // Entfernt - unterdrückt Fehler
 		$error = 0;
 
 		//loads variables for ajax call
@@ -672,7 +672,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 	}
 
 	function save_category_ajax() {
-		error_reporting(0);
+		// error_reporting(0); // Entfernt - unterdrückt Fehler
 		$error = 0;
 
 		//loads variables for ajax call
@@ -694,7 +694,7 @@ class WMD_PrettyPlugins extends WMD_PrettyPlugins_Functions {
 	}
 
 	function save_plugin_details_ajax() {
-		error_reporting(0);
+		// error_reporting(0); // Entfernt - unterdrückt Fehler
 		$error = 0;
 
 		//loads variables for ajax call

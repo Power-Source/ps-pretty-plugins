@@ -125,39 +125,68 @@ class WMD_PrettyPlugins_Functions {
     	return (is_ssl()) ? str_replace('http://', 'https://', $screenshot_value) : $screenshot_value;
     }
 
-	function get_resized_attachment_url($attachment_id, $width = '600', $height = '600', $crop = true, $suffix = "-plugin-screenshot") {
-		$attachment_url = wp_get_attachment_url($attachment_id);
-		if($attachment_url) {
-			$attachment_meta = wp_get_attachment_metadata($attachment_id);
-			if($attachment_meta['width'] > $width || $attachment_meta['height'] > $height) {
-				$old_image_details = array('path' => get_attached_file($attachment_id), 'url' => $attachment_url);
-				foreach ($old_image_details as $type => $address) {
-					$path_parts = pathinfo($address);
-					$filename = $path_parts['filename'];
-					$new_filename = $filename.$suffix.'.'.$path_parts['extension'];
-					$new_detail = $path_parts['dirname'].'/'.$new_filename;
+	function get_resized_attachment_url( $attachment_id, $width = 600, $height = 600, $crop = true, $suffix = '-plugin-screenshot' ) {
+		$attachment_url = wp_get_attachment_url( $attachment_id );
 
-					$new_image_details[$type] = $new_detail;
-				}
-
-				if(!file_exists($new_image_details['path'])) {
-					$image = wp_get_image_editor($old_image_details['path']);
-					if (!is_wp_error($image)) {
-					    $image->resize($width, $height, $crop);
-					    $image->save($new_image_details['path']);
-					}
-				}
-
-				if(file_exists($new_image_details['path']))
-					return $new_image_details['url'];
-				else
-					return false;
-			}
-			else
-				return  $attachment_url;
-		}
-		else
+		if ( ! $attachment_url ) {
 			return false;
+		}
+
+		$attachment_meta = wp_get_attachment_metadata( $attachment_id );
+
+		if (
+			! is_array( $attachment_meta ) ||
+			empty( $attachment_meta['width'] ) ||
+			empty( $attachment_meta['height'] )
+		) {
+			return $attachment_url;
+		}
+
+		if ( $attachment_meta['width'] <= $width && $attachment_meta['height'] <= $height ) {
+			return $attachment_url;
+		}
+
+		$old_image_details = array(
+			'path' => get_attached_file( $attachment_id ),
+			'url'  => $attachment_url,
+		);
+
+		$new_image_details = array();
+
+		foreach ( $old_image_details as $type => $address ) {
+			$path_parts = pathinfo( $address );
+
+			if ( empty( $path_parts['filename'] ) || empty( $path_parts['extension'] ) ) {
+				return false;
+			}
+
+			$new_filename = $path_parts['filename'] . $suffix . '.' . $path_parts['extension'];
+			$new_image_details[ $type ] = $path_parts['dirname'] . '/' . $new_filename;
+		}
+
+		if ( ! file_exists( $new_image_details['path'] ) ) {
+			$image = wp_get_image_editor( $old_image_details['path'] );
+
+			if ( is_wp_error( $image ) ) {
+				return false;
+			}
+
+			$resize_result = $image->resize( $width, $height, $crop );
+
+			if ( is_wp_error( $resize_result ) ) {
+				return false;
+			}
+
+			$save_result = $image->save( $new_image_details['path'] );
+
+			if ( is_wp_error( $save_result ) ) {
+				return false;
+			}
+		}
+
+		return file_exists( $new_image_details['path'] )
+			? $new_image_details['url']
+			: false;
 	}
 
 	function get_merged_plugins_categories() {
@@ -210,37 +239,65 @@ class WMD_PrettyPlugins_Functions {
 	}
 
 	function get_last_category_id() {
-		if($this->plugins_categories) {
-			end($this->plugins_categories);
-			$last_category = key($this->plugins_categories);
-			return substr($last_category, 8);
-		}
-		else
+		if ( empty( $this->plugins_categories ) || ! is_array( $this->plugins_categories ) ) {
 			return 0;
+		}
+
+		$keys = array_keys( $this->plugins_categories );
+		$last_category = end( $keys );
+
+		if ( ! is_string( $last_category ) || strlen( $last_category ) <= 8 ) {
+			return 0;
+		}
+
+		return (int) substr( $last_category, 8 );
 	}
 
-	function get_validated_options($input) {
-		if(is_array($input)) {
-			if(isset($input['plugins_links']) && in_array($input['plugins_links'], array('plugin_url', 'plugin_cutom_url', 'plugin_url_or_cutom_url', 'disable')))
-				$this->options['plugins_links'] = $input['plugins_links'];
-			else
-				$this->options['plugins_links'] = 'plugin_cutom_url';
+	function get_validated_options( $input ) {
+		if ( ! is_array( $input ) ) {
+			return $this->options;
+		}
 
-			$possible_themes = $this->get_themes();
-			if(isset($input['theme']) && array_key_exists($input['theme'], $possible_themes))
-				$this->options['theme'] = $input['theme'];
-			else
-				$this->options['theme'] = 'standard/quick-sand';
+		if ( isset( $input['plugins_links'] ) && in_array(
+			$input['plugins_links'],
+			array( 'plugin_url', 'plugin_cutom_url', 'plugin_url_or_cutom_url', 'disable' ),
+			true
+		) ) {
+			$this->options['plugins_links'] = $input['plugins_links'];
+		} else {
+			$this->options['plugins_links'] = 'plugin_cutom_url';
+		}
 
-			$standard_options = array('plugins_link_label' => 'strip_tags', 'plugins_page_title' => 'strip_tags', 'plugins_page_description' => '', 'plugins_auto_screenshots' => '', 'plugins_auto_screenshots_wp' => '', 'setup_mode' => '', 'plugins_hide_descriptions' => '', 'plugins_auto_screenshots_by_name' => '');
-			foreach ($standard_options as $option => $action) {
-				if(isset($input[$option])) {
-					if($action == 'strip_tags')
-						$input[$option] = strip_tags($input[$option]);
-					$this->options[$option] = $input[$option];
+		$possible_themes = $this->get_themes();
+
+		if ( isset( $input['theme'] ) && array_key_exists( $input['theme'], $possible_themes ) ) {
+			$this->options['theme'] = $input['theme'];
+		} else {
+			$this->options['theme'] = 'standard/quick-sand';
+		}
+
+		$standard_options = array(
+			'plugins_link_label'            => 'strip_tags',
+			'plugins_page_title'            => 'strip_tags',
+			'plugins_page_description'      => '',
+			'plugins_auto_screenshots'      => '',
+			'plugins_auto_screenshots_wp'   => '',
+			'setup_mode'                    => '',
+			'plugins_hide_descriptions'     => '',
+			'plugins_auto_screenshots_by_name' => '',
+		);
+
+		foreach ( $standard_options as $option => $action ) {
+			if ( isset( $input[ $option ] ) ) {
+				$value = $input[ $option ];
+
+				if ( 'strip_tags' === $action ) {
+					$value = strip_tags( $value );
 				}
-				elseif(!isset($this->options[$option]))
-					$this->options[$option] = $this->default_options[$option];
+
+				$this->options[ $option ] = $value;
+			} elseif ( ! isset( $this->options[ $option ] ) ) {
+				$this->options[ $option ] = $this->default_options[ $option ];
 			}
 		}
 
@@ -280,18 +337,23 @@ class WMD_PrettyPlugins_Functions {
 	}
 
 	//Converts array to xml
-	function get_array_as_xml($array, $node_name = 'item') {
+	function get_array_as_xml( $array, $node_name = 'item' ) {
 		$xml = "\n";
 
-		if (is_array($array) || is_object($array)) {
-			foreach ($array as $key => $value) {
-				if (is_numeric($key)) {
-					$key = $node_name;
-				}
-				$xml .= '<'.$key.'>'.$this->get_array_as_xml($value).'</'.$key.'>'."\n";
-			}
-		} else {
-			$xml = "\n".htmlspecialchars($array, ENT_QUOTES) . "\n";
+		if ( ! is_array( $array ) && ! is_object( $array ) ) {
+			return "\n" . htmlspecialchars(
+				(string) $array,
+				ENT_QUOTES | ENT_XML1,
+				'UTF-8'
+			) . "\n";
+		}
+
+		foreach ( $array as $key => $value ) {
+			$key = is_numeric( $key ) ? $node_name : (string) $key;
+
+			$xml .= '<' . $key . '>';
+			$xml .= get_array_as_xml( $value, $node_name );
+			$xml .= '</' . $key . '>' . "\n";
 		}
 
 		return $xml;
@@ -317,12 +379,26 @@ class WMD_PrettyPlugins_Functions {
 
 
 	function import_xml_data_setting_file($file_path, $config = 0) {
-	    $xml = simplexml_load_string(str_replace("\n", "", file_get_contents($file_path) ));
-	    $xml_json = json_encode($xml);
-	    $xml_import_data = json_decode($xml_json,TRUE);
+	    if ( ! file_exists( $file_path ) || ! is_readable( $file_path ) ) {
+			return;
+		}
 
-		if(isset($xml_import_data['Categories'])) {
-			$plugins_categories_to_import = array();
+		$xml = simplexml_load_file( $file_path );
+
+		if ( false === $xml ) {
+			return;
+		}
+
+		$xml_import_data = json_decode( wp_json_encode( $xml ), true );
+
+		if ( ! is_array( $xml_import_data ) ) {
+			return;
+		}
+
+		$plugins_categories_replace = array();
+		$plugins_categories_to_import = array();
+
+		if ( isset( $xml_import_data['Categories'] ) && is_array( $xml_import_data['Categories'] ) ) {
 
 			//replace names for config categories
 			if($config) {
@@ -371,13 +447,16 @@ class WMD_PrettyPlugins_Functions {
 			}
 		}
 
-		if(isset($xml_import_data['Plugins']['Plugin'])) {
+		if ( isset( $xml_import_data['Plugins']['Plugin'] ) && is_array( $xml_import_data['Plugins']['Plugin'] )) {
 			//fix for single plugin in xml
-			if(!isset($xml_import_data['Plugins']['Plugin'][0]))
-				$xml_import_data['Plugins']['Plugin'] = array(0 => $xml_import_data['Plugins']['Plugin']);
+			$plugins_to_import = $xml_import_data['Plugins']['Plugin'];
+
+			if ( isset( $plugins_to_import['Path'] ) ) {
+				$plugins_to_import = array( $plugins_to_import );
+			}
 
 			$plugin_custom_data_to_import = array();
-			foreach($xml_import_data['Plugins']['Plugin'] as $key => $value) {
+			foreach($plugins_to_import as $key => $value) {
 				if(isset($value['Path'])) {
 					$path = $value['Path'];
 					unset($value['Path']);
@@ -544,27 +623,4 @@ class WMD_PrettyPlugins_Functions {
 		else
 			return true;
 	}
-}
-
-//Compatibility with older PHP
-if (!function_exists('array_replace_recursive')) {
-	function array_replace_recursive() {
-	    $arrays = func_get_args();
-
-	    $original = array_shift($arrays);
-
-	    foreach ($arrays as $array) {
-	        foreach ($array as $key => $value) {
-	            if (is_array($value)) {
-	                $original[$key] = array_replace_recursive($original[$key], $array[$key]);
-        }
-
-	            else {
-	                $original[$key] = $value;
-      }
-    }
-	    }
-
-	    return $original;
-  }
 }
