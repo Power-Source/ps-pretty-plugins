@@ -14,33 +14,45 @@ jQuery(document).ready(function() {
 		});
 	}
 
-	//handle filtering by category
+	// Handle filtering by category.
 	jQuery('.subsubsub li:last-child').append(' |');
-	jQuery('.subsubsub').append('<li class="pl-categories"><select><option>'+wmd_pl_na.filter_by+'</option></select></li>');
-	jQuery.each(wmd_pl_na.plugin_categories, function( index, value ) {
-		/*
-		if(index.indexOf('config') == 0){
-			value = value+' (Config)';
-		}
-		*/
-		var selected = '';
-		if(wmd_pl_na.current_category == index) {
-			selected = ' selected'
-		}
-		jQuery('.pl-categories select').append('<option value="'+index+'"'+selected+'>'+value+'</option>');
-	});
-	jQuery('.subsubsub').on('change', '.pl-categories select', function() {
-		var value = jQuery(this).find(':selected').val();
-		if(value) {
-			var url = window.location.href;
-			if(url.indexOf('?') != '-1') {
-				url = url+'&category='+value;
-			}
-			else {
-				url = url+'?category='+value;
-			}
 
-			window.location.href = url;
+	var category_select = jQuery('<select>');
+
+	category_select.append(
+		jQuery('<option>', {
+			value: '',
+			text: wmd_pl_na.filter_by
+		})
+	);
+
+	jQuery.each(wmd_pl_na.plugin_categories, function( index, value ) {
+		var option = jQuery('<option>', {
+			value: index,
+			text: value
+		});
+
+		if ( wmd_pl_na.current_category == index ) {
+			option.prop('selected', true);
+		}
+
+		category_select.append(option);
+	});
+
+	jQuery('.subsubsub').append(
+		jQuery('<li>', {
+			class: 'pl-categories'
+		}).append(category_select)
+	);
+
+	jQuery('.subsubsub').on('change', '.pl-categories select', function() {
+		var value = jQuery(this).val();
+
+		if ( value ) {
+			var url = window.location.href;
+			var separator = url.indexOf('?') !== -1 ? '&' : '?';
+
+			window.location.href = url + separator + 'category=' + encodeURIComponent(value);
 		}
 	});
 

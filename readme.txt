@@ -33,6 +33,8 @@ Mit PS Pretty Plugins hast Du eine beispiellose Kontrolle über das Aussehen und
 = 1.0.2 =
 * XML Import/Export modernisiert
 * Weitere Moderniserungen auf PhP8 und WP Standards
+* Cross-Site Sicherheitslücke geschlossen
+* Behoben DOM text reinterpreted as HTML
 
 = 1.0.1 =
 * Verbessertes Laden der Logo/Screenshots des jeweiligen Plugins
